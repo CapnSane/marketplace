@@ -10,24 +10,24 @@ function createCard(i) {
   let cardobj = cards[i];
 
   cardbg.style.display = "grid";
-  cardbg.style.gridTemplateColumns =  "300px";
+  cardbg.style.gridTemplateColumns = "300px";
   cardbg.style.gridTemplateRows = "210px 210px 80px";
-  cardbg.style.gridTemplateAreas =  "image text stats";
-  cardbg.style.border =  "2px solid " + cardobj.color;
-  cardbg.style.borderRadius =  "18px";
-  cardbg.style.background =  "white";
-  cardbg.style.boxShadow =  "5px 5px 15px rgba(0,0,0,0.9)";
-  cardbg.style.fontFamily =  "roboto";
-  cardbg.style.textAlign =  "center";
-  cardbg.style.transition =  "0.5s ease";
-  cardbg.style.cursor =  "pointer";
+  cardbg.style.gridTemplateAreas = "image text stats";
+  cardbg.style.border = "2px solid " + cardobj.color;
+  cardbg.style.borderRadius = "18px";
+  cardbg.style.background = "white";
+  cardbg.style.boxShadow = "5px 5px 15px rgba(0,0,0,0.9)";
+  cardbg.style.fontFamily = "roboto";
+  cardbg.style.textAlign = "center";
+  cardbg.style.transition = "0.5s ease";
+  cardbg.style.cursor = "pointer";
   cardbg.style.margin = "30px";
 
   cardimg.style.background = cardobj.img;
   cardimg.style.backgroundSize = "cover";
   cardimg.style.borderTopLeftRadius = "15px";
   cardimg.style.borderTopRightRadius = "15px";
-  
+
   cardtype.style.gridArea = "text";
   cardtype.style.margin = "10px";
   cardtype.style.color = cardobj.color;
@@ -39,7 +39,7 @@ function createCard(i) {
   carddescription.innerHTML = cardobj.description;
   carddescription.style.color = cardobj.color;
 
-  cardstats.style.gridArea = "stats;" 
+  cardstats.style.gridArea = "stats;"
   cardstats.style.display = "grid";
   // if (carbobj.type == "Ground") {
   //   cardstats.style.gridTemplateColumns = "1fr 1fr 1fr";
@@ -75,5 +75,7 @@ function createCard(i) {
 console.log(cards.length);
 
 for (let i = 0; i < cards.length; i++) {
-  createCard(2*i);
+  createCard(i);
 }
+
+// createCard(0)

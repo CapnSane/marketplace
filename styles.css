@@ -1,30 +1,33 @@
 body {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   /* background:url("background.jpg"); */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
+
 .card {
   display: grid;
   grid-template-columns: 300px;
   grid-template-rows: 210px 210px 80px;
-  grid-template-areas: "image" "text" "stats";
+  grid-template-areas: "image""text""stats";
 
   border: 2px solid rgb(0, 31, 5);
   border-radius: 18px;
   background: white;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   font-family: roboto;
   text-align: center;
-  
+
 
   transition: 0.5s ease;
   cursor: pointer;
-  margin:30px;
+  margin: 30px;
 }
+
 .card-image {
   background: url("assets/ruins-563629_1280.jpg");
   border-top-left-radius: 15px;
@@ -36,21 +39,25 @@ body {
   grid-area: text;
   margin: 10px;
 }
+
 .card-text .date {
   color: rgb(0, 31, 5);
-  font-size:13px;
+  font-size: 13px;
 }
+
 .card-text p {
   color: grey;
-  font-size:15px;
+  font-size: 15px;
   font-weight: 300;
 }
+
 .card-text h2 {
-  margin-top:0px;
-  font-size:28px;
+  margin-top: 0px;
+  font-size: 28px;
 }
+
 .card-stats {
-  grid-area: stats; 
+  grid-area: stats;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -58,8 +65,9 @@ body {
   border-bottom-right-radius: 15px;
   background: rgb(0, 31, 5);
 }
+
 .card-stats .stat {
-  padding:10px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,21 +80,24 @@ body {
   border-right: 1px solid rgb(0, 0, 0);
 }
 
-.card-stats .value{
-  font-size:22px;
+.card-stats .value {
+  font-size: 22px;
   font-weight: 500;
 }
-.card-stats .value sup{
-  font-size:12px;
+
+.card-stats .value sup {
+  font-size: 12px;
 }
-.card-stats .type{
-  font-size:11px;
+
+.card-stats .type {
+  font-size: 11px;
   font-weight: 300;
   text-transform: uppercase;
 }
+
 .card:hover {
   transform: scale(1.15);
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
 /*card2*/
@@ -94,26 +105,32 @@ body {
   background: url("assets/road-1072823_1920.jpg");
   background-size: cover;
 }
+
 .card-text.card2 .date {
   color: rgb(0, 0, 255);
 }
+
 .card-stats.card2 .border {
   border-left: 1px solid rgb(185, 67, 20);
   border-right: 1px solid rgb(185, 67, 20);
 }
+
 .card-stats.card2 {
   background: rgb(0, 0, 255);
 }
+
 .card.card2 {
 
   border: 2px solid rgb(0, 0, 255);
 
 }
+
 /*card3*/
 .card-image.card3 {
   background: url("assets/sunset-3104410_1920.jpg");
   background-size: cover;
 }
+
 .card-text.card3 .date {
   color: rgb(255, 0, 0);
 }
