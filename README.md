@@ -1,7 +1,6 @@
-# Welcome to the [Card game name]
+# Welcome to the Hallowed Grounds :crossed_swords:
 #
-
-### About it:
+### About it
 
 This repository is a Marketplace Project signed to me by Yoyo Sensei from Japan.
 
@@ -20,6 +19,9 @@ This same project shall be individually made using Vue.js framework in the near 
 
 The first commit is an open repository only with this _README_ file.
 ##
+
+### Game rules
+(The rules will be described here)
 
 ### Copyright
 
