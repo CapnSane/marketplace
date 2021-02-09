@@ -3,6 +3,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.1] - 2020-02-09
+### Added
+- Attributes (stats) added to the cards.
+- Hovers added.
+
+### Changed
+- Description card texts changed.
+
+### Removed
+No removal.
+
+---
+
 ## [0.0.1] - 2020-02-08
 ### Added
 - First sketch  of the cards in Javascript.
