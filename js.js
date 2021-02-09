@@ -29,15 +29,25 @@ function createCard(i) {
   cardimg.style.borderTopRightRadius = "15px";
 
   cardtype.style.gridArea = "text";
-  cardtype.style.margin = "10px";
+  cardtype.style.fontSize = "13px";
+  cardtype.style.background = "rgb(230,230,230)";
+  cardtype.style.borderRadius = "30px";
+  cardtype.style.padding = "0 8px 0 8px";
   cardtype.style.color = cardobj.color;
   cardtype.innerHTML = cardobj.type;
-
+  
+  cardText.style.marginTop = "4px";
+  carddescription.style.textAlign= "justify";
+  
   cardtitle.innerHTML = cardobj.name;
+  cardtitle.style.marginTop = "8px";
   cardtitle.style.color = cardobj.color;
-
+  cardtitle.style.fontSize = "24px";
+  
   carddescription.innerHTML = cardobj.description;
   carddescription.style.color = cardobj.color;
+  carddescription.style.margin = "10px 18px 0 18px";
+  carddescription.style.fontSize = "15px";
 
   cardstats.style.gridArea = "stats;"
   cardstats.style.display = "grid";

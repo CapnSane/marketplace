@@ -202,7 +202,7 @@ let cards = [
     id: 34,
     name: "Demon tank berserker",
     type: "Brave",
-    description: "Demon tank berserker is the terror of warfares. Long bloody and fiery wings exempt weapons.",
+    description: "Demon tank berserker is the terror of warfares. Long bloody and fiery wings exempt weapons. It's hard hitting this berserker even when injured.",
     area: 5,
     capacity: NaN,
     cost: 0,
