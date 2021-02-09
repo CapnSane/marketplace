@@ -6,9 +6,14 @@ function createCard(i) {
   let cardtitle = document.createElement("h2");
   let carddescription = document.createElement("p");
   let cardstats = document.createElement("div");
+  let cardstats1 = document.createElement("div");
+  let cardstats2 = document.createElement("div");
+  let cardstats3 = document.createElement("div");
+  let cardstats4 = document.createElement("div");
 
   let cardobj = cards[i];
 
+  // Card base - Here is where the card elements are appended
   cardbg.style.display = "grid";
   cardbg.style.gridTemplateColumns = "300px";
   cardbg.style.gridTemplateRows = "210px 210px 80px";
@@ -31,11 +36,16 @@ function createCard(i) {
     this.style.boxShadow = "5px 5px 15px rgba(0,0,0,0.9)";
   };
 
+  // Card image
   cardimg.style.background = cardobj.img;
   cardimg.style.backgroundSize = "cover";
   cardimg.style.borderTopLeftRadius = "15px";
   cardimg.style.borderTopRightRadius = "15px";
 
+  // Card textbox - Type, title and description card is appended here
+  cardText.style.marginTop = "4px";
+  
+  // Card colours and borders - Here is where the card type text is added
   cardtype.style.gridArea = "text";
   cardtype.style.fontSize = "13px";
   cardtype.style.background = "rgb(230,230,230)";
@@ -44,40 +54,80 @@ function createCard(i) {
   cardtype.style.color = cardobj.color;
   cardtype.innerHTML = cardobj.type;
   
-  cardText.style.marginTop = "4px";
-  carddescription.style.textAlign= "justify";
-  
+  // Card title text
   cardtitle.innerHTML = cardobj.name;
   cardtitle.style.marginTop = "8px";
   cardtitle.style.color = cardobj.color;
   cardtitle.style.fontSize = "24px";
+  cardtitle.style.fontWeight = "bold";
   
+  // Card description text
   carddescription.innerHTML = cardobj.description;
   carddescription.style.color = cardobj.color;
   carddescription.style.margin = "10px 18px 0 18px";
-  carddescription.style.fontSize = "15px";
+  carddescription.style.fontSize = "13px";
+  carddescription.style.textAlign= "center";
+  carddescription.style.fontWeight = "bold";
+
+  carddescription.onmouseover = function () {
+    this.style.fontWeight = "bolder";
+  };
+  carddescription.onmouseout = function () {
+    this.style.fontWeight = "bold";
+  };
 
   cardstats.style.gridArea = "stats;"
   cardstats.style.display = "grid";
-  // if (carbobj.type == "Ground") {
-  //   cardstats.style.gridTemplateColumns = "1fr 1fr 1fr";
-  // } else {
-  //   cardstats.style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
-  // };
+
+  if (cardobj.type == "Ground") {
+    cardstats.style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
+  } else {
+    cardstats.style.gridTemplateColumns = "1fr 1fr 1fr";
+  };
+
   cardstats.style.gridTemplateRows = "1fr";
   cardstats.style.borderBottomLeftRadius = "15px";
   cardstats.style.borderBottomRightRadius = "15px";
-  cardstats.style.background = "rgb(0, 31, 5)";
-  // if (carbobj.type == "Ground") {
-  //   cardstats.innerHTML = cardobj.area;
-  //   cardstats.innerHTML = cardobj.defence;
-  //   cardstats.innerHTML = cardobj.capacity;
-  //   cardstats.innerHTML = cardobj.cost;
-  // } else {
-  //   cardstats.innerHTML = cardobj.attack;
-  //   cardstats.innerHTML = cardobj.defence;
-  //   cardstats.innerHTML = cardobj.cost;
-  // };
+  cardstats.style.padding = "15px 15px 0 15px";
+  cardstats.style.color = "white";
+  cardstats.style.fontSize = "16px";
+  cardstats.style.background = cardobj.color;
+
+  if (cardobj.type == "Ground") {
+    cardstats1.innerHTML = cardobj.area + "<br>" + "Area";
+    cardstats2.innerHTML = cardobj.defence + "<br>" + "Defence";
+    cardstats3.innerHTML = cardobj.capacity + "<br>" + "Capacity";
+    cardstats4.innerHTML = cardobj.cost + "<br>" + "Cost";
+  } else {
+    cardstats1.innerHTML = cardobj.attack + "<br>" + "Attack";
+    cardstats2.innerHTML = cardobj.defence + "<br>" + "Defence";
+    cardstats3.innerHTML = cardobj.cost + "<br>" + "Cost";
+  };
+
+  cardstats1.onmouseover = function () {
+    this.style.fontWeight = "bold";
+  };
+  cardstats1.onmouseout = function () {
+    this.style.fontWeight = "normal";
+  };
+  cardstats2.onmouseover = function () {
+    this.style.fontWeight = "bold";
+  };
+  cardstats2.onmouseout = function () {
+    this.style.fontWeight = "normal";
+  };
+  cardstats3.onmouseover = function () {
+    this.style.fontWeight = "bold";
+  };
+  cardstats3.onmouseout = function () {
+    this.style.fontWeight = "normal";
+  };
+  cardstats4.onmouseover = function () {
+    this.style.fontWeight = "bold";
+  };
+  cardstats4.onmouseout = function () {
+    this.style.fontWeight = "normal";
+  };
 
   document.body.appendChild(cardbg);
   cardbg.appendChild(cardimg);
@@ -85,12 +135,16 @@ function createCard(i) {
   cardText.appendChild(cardtype);
   cardText.appendChild(cardtitle);
   cardText.appendChild(carddescription);
+  cardbg.appendChild(cardstats);
+  cardstats.appendChild(cardstats2);
+  cardstats.appendChild(cardstats1);
+  cardstats.appendChild(cardstats3);
+  cardstats.appendChild(cardstats4);
 }
 // for (let i = 0; i < cards.length; i++) {
 //   let cardobj = cards[i];
 // }
 // console.log(cardobj.img);
-console.log(cards.length);
 
 for (let i = 0; i < cards.length; i++) {
   createCard(i);
