@@ -22,6 +22,14 @@ function createCard(i) {
   cardbg.style.transition = "0.5s ease";
   cardbg.style.cursor = "pointer";
   cardbg.style.margin = "30px";
+  cardbg.onmouseover = function () {
+    this.style.transform = "scale(105%)";
+    this.style.boxShadow = "5px 5px 25px rgba(0, 0, 0, 0.6)";
+  };
+  cardbg.onmouseout = function () {
+    this.style.transform = "scale(100%)";
+    this.style.boxShadow = "5px 5px 15px rgba(0,0,0,0.9)";
+  };
 
   cardimg.style.background = cardobj.img;
   cardimg.style.backgroundSize = "cover";
