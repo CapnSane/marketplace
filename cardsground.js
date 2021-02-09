@@ -3,7 +3,7 @@ let cards = [
   // Dread spot cards
   {
     id: 11,
-    name: "Dread spot",
+    name: "Dread Spot",
     type: "Ground",
     description: "The spooky ancient place of unholy sacrifices. Warlock masters with mana runes fought the lightforged enemy shields, smiting and purging them to the oblivium.",
     area: 4,
@@ -16,7 +16,7 @@ let cards = [
   },
   {
     id: 12,
-    name: "Dread spot",
+    name: "Dread Spot",
     type: "Ground",
     description: "The mists of forsaken souls chase away the light, making the terrain even darker and more gloomy, cornering fire mages with their treacherous tongues, corrupting even the most devout of light.",
     area: 6,
@@ -42,7 +42,7 @@ let cards = [
   },
   {
     id: 14,
-    name: "Chilling warlock",
+    name: "Chilling Warlock",
     type: "Brave",
     description: "Chilling warlocks summon demonic energy blasts that stun the most powerful warriors. The dread greenish plasma energy is capable to smash armors and shields with only one hitting.",
     area: 6,
@@ -55,9 +55,9 @@ let cards = [
   },
   {
     id: 15,
-    name: "Stone witcher",
+    name: "Stone Witcher",
     type: "Brave",
-    description: "The shadow arrows hit the enemies and turn them to stone, making their movements difficult.",
+    description: "The shadow arrows hit the enemies turning them to stone, and making their movements difficult. They are considered the most maleficent rangers of Dread Spot.",
     area: 6,
     capacity: NaN,
     cost: 0,
@@ -82,7 +82,7 @@ let cards = [
   // Holy ground cards
   {
     id: 21,
-    name: "Holy ground",
+    name: "Holy Ground",
     type: "Ground",
     description: "The arcane light brights over the paladins whom wield their swords. This is a place of glory and catharsis after the war and it purifies the soldier spirits.",
     area: 5,
@@ -95,7 +95,7 @@ let cards = [
   },
   {
     id: 22,
-    name: "Holy ground",
+    name: "Holy Ground",
     type: "Ground",
     description: "The lightforged shields tinkle across the holy pathway between the ancient empowered rune trees. Light warriors roar bravely with their restored souls in face of battle.",
     area: 5,
@@ -121,7 +121,7 @@ let cards = [
   },
   {
     id: 24,
-    name: "Holy warrior",
+    name: "Holy Warrior",
     type: "Brave",
     description: "The holy warriors have empowered armors of light that overshadow the path where they tread and confunsing the enemies sights.",
     area: 5,
@@ -134,7 +134,7 @@ let cards = [
   },
   {
     id: 25,
-    name: "Holy hunter",
+    name: "Holy Hunter",
     type: "Brave",
     description: "Holy hunters are the masters of the archery. They chase and shoot the target quickly as a lightning bolt, neutralize the threat.",
     area: 5,
@@ -147,9 +147,9 @@ let cards = [
   },
   {
     id: 26,
-    name: "Wild hunter",
+    name: "Wild Hunter",
     type: "Brave",
-    description: "The wild hunters tame beasts to use them against the enemies, distracting and hitting them with fire arrows that drill everything along the way.",
+    description: "The wild hunters tame beasts and use them against the enemies, distracting and hitting them with fire arrows that drill everything along the way.",
     area: 5,
     capacity: NaN,
     cost: 0,
@@ -161,7 +161,7 @@ let cards = [
   // Bloody gorge cards
   {
     id: 31,
-    name: "Bloody gorge",
+    name: "Bloody Gorge",
     type: "Ground",
     description: "The ground was not always covered in blood, yet the gore celebrations were practiced by the insane veterans that stayed aimless wandering. Now these grounds desecrate souls and urge them on with vampiric powers.",
     area: 4,
@@ -174,7 +174,7 @@ let cards = [
   },
   {
     id: 32,
-    name: "Bloody gorge",
+    name: "Bloody Gorge",
     type: "Ground",
     description: "The bloody moon is even more red when reflecting the imbued vampiric mana ground, becoming the power-well for the forgotten underground creatures.",
     area: 5,
@@ -187,7 +187,7 @@ let cards = [
   },
   {
     id: 33,
-    name: "Blood berserker",
+    name: "Blood Berserker",
     type: "Brave",
     description: "A giant familiar demon guides and advises the blood berserker against the enemies. The blood berserker overwhelms everything ahead with the long sword, obliterating even the best forged armors.",
     area: 5,
@@ -200,9 +200,9 @@ let cards = [
   },
   {
     id: 34,
-    name: "Demon tank berserker",
+    name: "Demon Berserker",
     type: "Brave",
-    description: "Demon tank berserker is the terror of warfares. Long bloody and fiery wings exempt weapons. It's hard hitting this berserker even when injured.",
+    description: "Demon berserker is the terror of warfares. Long bloody and fiery wings exempt weapons. It's hard hitting this berserker even when injured.",
     area: 5,
     capacity: NaN,
     cost: 0,
@@ -226,7 +226,7 @@ let cards = [
   },
   {
     id: 36,
-    name: "Dark rogue",
+    name: "Dark Rogue",
     type: "Brave",
     description: "Dark rogues stealthy walk within the enemy shadows, cutting throats before their warcries.",
     area: 5,
