@@ -82,6 +82,8 @@ function createCard(i) {
 
   if (cardobj.type == "Ground") {
     cardstats.style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
+  } else if (cardobj.type == "Castle") {
+    cardstats.style.gridTemplateColumns = "1fr 1fr";
   } else {
     cardstats.style.gridTemplateColumns = "1fr 1fr 1fr";
   };
@@ -89,7 +91,7 @@ function createCard(i) {
   cardstats.style.gridTemplateRows = "1fr";
   cardstats.style.borderBottomLeftRadius = "15px";
   cardstats.style.borderBottomRightRadius = "15px";
-  cardstats.style.padding = "15px 15px 0 15px";
+  cardstats.style.padding = "20px 15px 0 15px";
   cardstats.style.color = "white";
   cardstats.style.fontSize = "16px";
   cardstats.style.background = cardobj.color;
@@ -99,6 +101,9 @@ function createCard(i) {
     cardstats2.innerHTML = cardobj.defence + "<br>" + "Defence";
     cardstats3.innerHTML = cardobj.capacity + "<br>" + "Capacity";
     cardstats4.innerHTML = cardobj.cost + "<br>" + "Cost";
+  } else if (cardobj.type == "Castle") {
+    cardstats1.innerHTML = cardobj.capacity + "<br>" + "Capacity";
+    cardstats2.innerHTML = cardobj.defence + "<br>" + "Defence";
   } else {
     cardstats1.innerHTML = cardobj.attack + "<br>" + "Attack";
     cardstats2.innerHTML = cardobj.defence + "<br>" + "Defence";

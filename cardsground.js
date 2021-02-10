@@ -2,6 +2,19 @@
 let cards = [
   // Dread spot cards
   {
+    id: 1,
+    name: "Dread Castle",
+    type: "Castle",
+    description: "A dread fortress, built by the maleficent ancient warlocks to defile the approaching weak souls. Once touched by rune forces, the sense of humanity ends, acquiring corrupted power and mystical insights.",
+    area: NaN,
+    capacity: 12,
+    cost: NaN,
+    attack: NaN,
+    defence: 30,
+    color: "purple",
+    img: "url('assets/castledread.jpg')",
+  },
+  {
     id: 11,
     name: "Dread Spot",
     type: "Ground",
@@ -81,6 +94,19 @@ let cards = [
   },
   // Holy ground cards
   {
+    id: 2,
+    name: "Holy Fortress",
+    type: "Castle",
+    description: "The holy elder's power imbues the rocky building and protects everyone that inhabits the Holy Fortress surroundings. This is the dream place for prospering and growing strong.",
+    area: NaN,
+    capacity: 12,
+    cost: NaN,
+    attack: NaN,
+    defence: 30,
+    color: "darkgreen",
+    img: "url('assets/castleholy.jpg')",
+  },
+  {
     id: 21,
     name: "Holy Ground",
     type: "Ground",
@@ -159,6 +185,19 @@ let cards = [
     img: "url('assets/hunterholy2.jpg')",
   },
   // Bloody gorge cards
+  {
+    id: 3,
+    name: "Château Rouge",
+    type: "Castle",
+    description: "Chateau of the thousand sacrifices, the house of immolation. Demons and night creatures have haunted this place, dazing and confusing the lost souls that approach the hefty structure.",
+    area: NaN,
+    capacity: 12,
+    cost: NaN,
+    attack: NaN,
+    defence: 30,
+    color: "darkred",
+    img: "url('assets/castlebloody.jpg')",
+  },
   {
     id: 31,
     name: "Bloody Gorge",
