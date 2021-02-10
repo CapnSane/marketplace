@@ -63,9 +63,9 @@ The turns are basicaly when the player of the turn can draw the card and execute
 #### Decks and number of cards
 
 There are three types of decks:
-- <span style="color:purple">_Dread cards_</span>
-- <span style="color:darkgreen">_Holy cards_</span>
-- <span style="color:darkred">_Bloody cards_</span>
+- <span style="color:purple">_Dread cards_ (purple)</span>
+- <span style="color:darkgreen">_Holy cards_ (green)</span>
+- <span style="color:darkred">_Bloody cards_ (red)</span>
 
 The players can choose their deck cards freely, respecting the limit of 50 cards. _(The Castle is not counted for the number of deck cards.)_
 
