@@ -3,6 +3,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.1] - 2020-02-10
+### Added
+- Snowing background added.
+
+### Changed
+No changes.
+
+### Removed
+No removal.
+
+---
+
 ## [0.0.1] - 2020-02-09
 ### Added
 - Attributes (stats) added to the cards.
