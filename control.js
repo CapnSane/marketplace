@@ -98,15 +98,15 @@ function createCard(i) {
 
   if (cardobj.type == "Ground") {
     cardstats1.innerHTML = cardobj.area + "<br>" + "Area";
-    cardstats2.innerHTML = cardobj.defence + "<br>" + "Defence";
+    cardstats2.innerHTML = cardobj.defense + "<br>" + "Defense";
     cardstats3.innerHTML = cardobj.capacity + "<br>" + "Capacity";
     cardstats4.innerHTML = cardobj.cost + "<br>" + "Cost";
   } else if (cardobj.type == "Castle") {
     cardstats1.innerHTML = cardobj.capacity + "<br>" + "Capacity";
-    cardstats2.innerHTML = cardobj.defence + "<br>" + "Defence";
+    cardstats2.innerHTML = cardobj.defense + "<br>" + "Defense";
   } else {
     cardstats1.innerHTML = cardobj.attack + "<br>" + "Attack";
-    cardstats2.innerHTML = cardobj.defence + "<br>" + "Defence";
+    cardstats2.innerHTML = cardobj.defense + "<br>" + "Defense";
     cardstats3.innerHTML = cardobj.cost + "<br>" + "Cost";
   };
 

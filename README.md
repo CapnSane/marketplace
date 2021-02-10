@@ -21,7 +21,17 @@ The first commit is an open repository only with this _README_ file.
 ##
 
 ### Game rules
-(The rules will be described here)
+**Hallowed Grounds** is a card game that involves two or three players who are engaged in a battle of land domination. Each player has their own deck, either one previously constructed or made from a limited pool of cards for the event. All the players start the game with the _Castle_ card on the board, which have 30 as their "_life total_" and loses the game when their life total is reduced to zero. A player can also lose if they must draw from an empty deck.
+
+#### Cards in Hallowed Grounds
+There are three types of cards:
+- _Castle_
+- _Ground_
+- _Brave_
+
+The _Castle_ type is the life total of a player, the very first card on the board and it has 30 of life in a total, called _Defense_. This card has two attributes, Defence
+
+The _Ground_ type is the land where the braves battle. This card has four attributes, 
 
 ### Copyright
 
