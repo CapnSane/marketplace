@@ -1,10 +1,26 @@
+body, html {
+  background: #1e2021;
+}
+
 body {
-  /* width: 100vw;
-  height: 100vh; */
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  /* background:url("background.jpg"); */
-  /* overflow: hidden; */
+
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-top: 30px;
+
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-image: 
+    linear-gradient(rgba(30,32,33,0.1), rgba(30,42,53,0.8)), url("assets/winter.jpg");
+  background-size: cover;
+  /* background-position: bottom center; */
+  background-attachment: fixed;
 }

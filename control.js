@@ -15,6 +15,7 @@ function createCard(i) {
 
   // Card base - Here is where the card elements are appended
   cardbg.style.display = "grid";
+  cardbg.style.zIndex = "2";
   cardbg.style.gridTemplateColumns = "300px";
   cardbg.style.gridTemplateRows = "210px 210px 80px";
   cardbg.style.gridTemplateAreas = "image text stats";

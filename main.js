@@ -2,6 +2,7 @@ let App = {
   init: function () {
     // this.elements.createElements();
     this.controllers.createCards();
+    this.controllers.createSnow();
   },
   store: {},
   controllers: {
@@ -10,6 +11,9 @@ let App = {
         createCard(i);
       }
     },
+    createSnow: function () {
+      snowing();
+    }
   },
   elements: {
     app: null,
