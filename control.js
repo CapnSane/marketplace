@@ -102,7 +102,7 @@ function createCard(i) {
     cardstats3.innerHTML = cardobj.capacity + "<br>" + "Capacity";
     cardstats4.innerHTML = cardobj.cost + "<br>" + "Cost";
   } else if (cardobj.type == "Castle") {
-    cardstats1.innerHTML = cardobj.capacity + "<br>" + "Capacity";
+    cardstats1.innerHTML = cardobj.area + "<br>" + "Area";
     cardstats2.innerHTML = cardobj.defense + "<br>" + "Defense";
   } else {
     cardstats1.innerHTML = cardobj.attack + "<br>" + "Attack";
