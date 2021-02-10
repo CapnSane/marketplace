@@ -146,8 +146,6 @@ function createCard(i) {
 // }
 // console.log(cardobj.img);
 
-for (let i = 0; i < cards.length; i++) {
-  createCard(i);
-}
+
 
 // createCard(0)
