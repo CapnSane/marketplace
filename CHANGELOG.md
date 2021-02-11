@@ -3,6 +3,19 @@
 
 All notable changes to this project will be documented in this file.
 
+# [0.0.1] - 2020-02-11
+### Added
+- Initial game page.
+- Fire sparks on initial background page.
+
+### Changed
+No changes.
+
+### Removed
+No removal.
+
+---
+
 ## [0.0.1] - 2020-02-10
 ### Added
 - Snowing background added.
