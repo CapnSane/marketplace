@@ -27,12 +27,14 @@ body {
 
 a {
   text-decoration: none;
+  outline: none;
 }
 
 a:hover {
   color:yellow;
   cursor:pointer;  
   text-decoration: none;
+  outline: none;
 }
 
 .fire {
