@@ -19,7 +19,7 @@ body {
   height: 100%;
   z-index: 1;
   background-image: 
-    linear-gradient(rgba(30,32,33,0.1), rgba(30,42,53,0.1)), url("assets/winter.jpg");
+    linear-gradient(rgba(30,32,33,0.1), rgba(30,42,53,0.1)), url("/assets/winter.jpg");
   background-size: cover;
   /* background-position: bottom center; */
   background-attachment: fixed;
@@ -42,7 +42,7 @@ a:hover {
   position: absolute;
   z-index: -1;
   background-image: 
-  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("assets/mainfire.jpg");
+  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("/assets/mainfire.jpg");
   /* background-size: cover; */
   background-attachment: fixed;
 }

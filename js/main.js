@@ -2,7 +2,7 @@ let App = {
   init: function () {
     // this.elements.createElements();
     const locSearch = new URLSearchParams(document.location.pathname);
-    locSearch.has("/cards.html") ?  (this.controllers.createCards() || this.controllers.createSnow()) : this.controllers.createFire();
+    locSearch.has("/cards.html") ? (this.controllers.createCards() || this.controllers.createSnow()) : this.controllers.createFire();
 
   },
   store: {},
