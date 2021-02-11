@@ -1,8 +1,9 @@
 let App = {
   init: function () {
     // this.elements.createElements();
-    this.controllers.createCards();
-    this.controllers.createSnow();
+    const locSearch = new URLSearchParams(document.location.pathname);
+    locSearch.has("/cards.html") ?  (this.controllers.createCards() || this.controllers.createSnow()) : this.controllers.createFire();
+
   },
   store: {},
   controllers: {
@@ -13,7 +14,10 @@ let App = {
     },
     createSnow: function () {
       snowing();
-    }
+    },
+    createFire: function () {
+      burning();
+    },
   },
   elements: {
     app: null,

@@ -24,3 +24,72 @@ body {
   /* background-position: bottom center; */
   background-attachment: fixed;
 }
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color:yellow;
+  cursor:pointer;  
+  text-decoration: none;
+}
+
+.fire {
+  display: flex;
+  position: absolute;
+  z-index: -1;
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("assets/mainfire.jpg");
+  /* background-size: cover; */
+  background-attachment: fixed;
+}
+
+.viner-font {
+  font-family: "Viner Hand ITC";
+  src: url("http://images.hollywood.com/images/site/vineritc.ttf");
+}
+
+.title-text {
+  font-size: 200px;
+  font-size: 10vw;
+  color: rgb(220, 0, 0);
+  text-shadow: -3px -3px rgb(0, 0, 0);
+}
+
+.play-font {
+  font-family: 'Play', sans-serif;
+  text-decoration: none;
+}
+
+.play-size {
+  font-weight: bold;
+  font-size: 4vw;
+  color: yellow;
+  text-shadow: 4px 4px rgb(0, 0, 0);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.black-footer {
+  z-index: 2;
+  background-color: black;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  margin: 0 0 0 0;
+  position: fixed;
+}
