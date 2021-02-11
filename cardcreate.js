@@ -1,7 +1,7 @@
 function createCard(i) {
   let cardbg = document.createElement("div");
   let cardimg = document.createElement("div");
-  let cardText = document.createElement("div");
+  let cardtext = document.createElement("div");
   let cardtype = document.createElement("span");
   let cardtitle = document.createElement("h2");
   let carddescription = document.createElement("p");
@@ -21,7 +21,7 @@ function createCard(i) {
   cardbg.style.gridTemplateAreas = "image text stats";
   cardbg.style.border = "2px solid " + cardobj.color;
   cardbg.style.borderRadius = "18px";
-  cardbg.style.background = "white";
+  cardbg.style.background = cardobj.color;
   cardbg.style.boxShadow = "5px 5px 15px rgba(0,0,0,0.9)";
   cardbg.style.fontFamily = "roboto";
   cardbg.style.textAlign = "center";
@@ -44,7 +44,8 @@ function createCard(i) {
   cardimg.style.borderTopRightRadius = "15px";
 
   // Card textbox - Type, title and description card is appended here
-  cardText.style.marginTop = "4px";
+  cardtext.style.marginTop = "4px";
+  cardtext.style.background = "white";
   
   // Card colours and borders - Here is where the card type text is added
   cardtype.style.gridArea = "text";
@@ -137,10 +138,10 @@ function createCard(i) {
 
   document.body.appendChild(cardbg);
   cardbg.appendChild(cardimg);
-  cardbg.appendChild(cardText);
-  cardText.appendChild(cardtype);
-  cardText.appendChild(cardtitle);
-  cardText.appendChild(carddescription);
+  cardbg.appendChild(cardtext);
+  cardtext.appendChild(cardtype);
+  cardtext.appendChild(cardtitle);
+  cardtext.appendChild(carddescription);
   cardbg.appendChild(cardstats);
   cardstats.appendChild(cardstats2);
   cardstats.appendChild(cardstats1);
