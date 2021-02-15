@@ -41,6 +41,7 @@ p {
 
 .border-index:hover {
   border: 4px ridge white;
+  transition: 0.5s ease;
   transform: scale(104%);
 }
 
