@@ -17,6 +17,7 @@ function createCard(i) {
   cardBg.style.display = "grid";
   cardBg.style.zIndex = "2";
   cardBg.style.gridTemplateColumns = "300px";
+  cardBg.style.width = "304px";
   cardBg.style.gridTemplateRows = "210px 210px 80px";
   cardBg.style.gridTemplateAreas = "image text stats";
   cardBg.style.border = "2px solid " + cardobj.color;
@@ -28,8 +29,9 @@ function createCard(i) {
   cardBg.style.transition = "0.5s ease";
   cardBg.style.cursor = "pointer";
   cardBg.style.margin = "30px";
+  cardBg.style.float = "right";
   cardBg.onmouseover = function () {
-    this.style.transform = "scale(105%)";
+    this.style.transform = "scale(108%)";
     this.style.boxShadow = "5px 5px 25px rgba(0, 0, 0, 0.6)";
   };
   cardBg.onmouseout = function () {
@@ -66,7 +68,6 @@ function createCard(i) {
   // Card description text
   cardDescription.innerHTML = cardobj.description;
   cardDescription.style.color = cardobj.color;
-  cardDescription.style.margin = "10px 18px 0 18px";
   cardDescription.style.fontSize = "13px";
   cardDescription.style.textAlign= "center";
   cardDescription.style.fontWeight = "bold";
@@ -136,7 +137,7 @@ function createCard(i) {
     this.style.fontWeight = "normal";
   };
 
-  document.body.appendChild(cardBg);
+  document.getElementById("cardDiv").appendChild(cardBg);
   cardBg.appendChild(cardImg);
   cardBg.appendChild(cardText);
   cardText.appendChild(cardType);
