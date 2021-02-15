@@ -68,6 +68,7 @@ function createCard(i) {
   // Card description text
   cardDescription.innerHTML = cardobj.description;
   cardDescription.style.color = cardobj.color;
+  cardDescription.style.padding = "6px 20px 0 20px";
   cardDescription.style.fontSize = "13px";
   cardDescription.style.textAlign= "center";
   cardDescription.style.fontWeight = "bold";
