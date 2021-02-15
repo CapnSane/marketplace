@@ -1,15 +1,15 @@
 function createCard(i) {
-  let cardBg = document.createElement("div");
-  let cardImg = document.createElement("div");
-  let cardText = document.createElement("div");
-  let cardType = document.createElement("span");
-  let cardTitle = document.createElement("h2");
-  let cardDescription = document.createElement("p");
-  let cardStats = document.createElement("div");
-  let cardStats1 = document.createElement("div");
-  let cardStats2 = document.createElement("div");
-  let cardStats3 = document.createElement("div");
-  let cardStats4 = document.createElement("div");
+  const cardBg = document.createElement("div");
+  const cardImg = document.createElement("div");
+  const cardText = document.createElement("div");
+  const cardType = document.createElement("span");
+  const cardTitle = document.createElement("h2");
+  const cardDescription = document.createElement("p");
+  const cardStats = document.createElement("div");
+  const cardStats1 = document.createElement("div");
+  const cardStats2 = document.createElement("div");
+  const cardStats3 = document.createElement("div");
+  const cardStats4 = document.createElement("div");
 
   let cardobj = cards[i];
 
