@@ -16,17 +16,16 @@
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <!-- CSS -->
   <link rel="stylesheet" href="/css/styles.css">
-  
+
 </head>
 
 <body>
-  
+
   <div class="two-column-div">
     <div class="index-div">
       <p>
         <a id="myBtn" class="game-index border-index popup" onclick="myFunction()">RULES
         </a>
-        <!-- <p id="box" class="box hide" onclick="jorje()">Jorge</p> -->
       </p>
       <!-- The Modal Box of Rules-->
       <div id="myModal" class="modal">
@@ -34,124 +33,144 @@
         <div class="modal-content">
           <span class="close">&times;</span>
           <p>
-            <strong>Hallowed Grounds</strong> is a card game that involves two or three players who are engaged in a battle of
-            land domination. Each player has their own deck, either one previously constructed or made from a limited pool of
-            cards for the event. All the players start the game with the <i>Castle</i> card on the board, which have 30 as their "<i>life
-            total</i>" and loses the game when their life total is reduced to zero. A player can also lose if they must draw from an
+            <strong>Hallowed Grounds</strong> is a card game that involves two or three players who are engaged in a
+            battle of
+            land domination. Each player has their own deck, either one previously constructed or made from a limited
+            pool of
+            cards for the event. All the players start the game with the <i>Castle</i> card on the board, which have 30
+            as their "<i>life
+              total</i>" and loses the game when their life total is reduced to zero. A player can also lose if they
+            must draw from an
             empty deck.
           </p>
-        
-            <h4>
-              Cards in Hallowed Grounds
-            </h4>
-        
-            <p>
-              There are three types of cards:
-            </p>
-        
-            <ul>
-              <li>
-                Castle
-              </li>
-              <li>
-                Ground
-              </li>
-              <li>
-                Brave
-              </li>
-            </ul>
-        
-            <p>
-              The <i>Castle</i> type is the life total of a player, the very first card on the board and it has 30 of life in a
-              total, called <i>Defense</i>. This card has two attributes, <i>Defense</i> and <i>Area</i>.
-        
-              The <i>Ground</i> type is the land where the braves battle. This card has four attributes, <i>Defense</i>,
-              <i>Area</i>, <i>Capacity</i> and <i>Cost</i>.
-        
-              The <i>Brave</i> type is the soldier-like, that can attack or protect. This card has three attributes,
-              <i>Defense</i>, <i>Attack</i>, and <i>Cost</i>.
-            </p>
-        
-            <h4>Attributes</h4>
-        
-        
-            <p>
-              There are five card attributes:
-            </p>
-        
-            <ul>
-              <li>
-                Attack
-              </li>
-              <li>
-                Defense
-              </li>
-              <li>
-                Area
-              </li>
-              <li>
-                Capacity
-              </li>
-              <li>
-                Cost
-              </li>
-            </ul>
-        
-            <p>
-              Basicaly, the <i>Defense</i> attribute is the capabillity to defend an attack. The card is removed from the game when the
-              <i>Attack</i> is greater than the <i>Defense</i>. Thus, the card that received the "damage" is discarded to the "discard pile".
-              If the card is defending a castle from a direct attack to it, the card is not discarded because the attack was made
-              against the <i>Castle</i>.
-            
-              The <i>Area</i> attribute is how many <i>Brave</i> cards can be stack over it. Only the Castle and Ground have this attribute.
-              On the other hand the <i>Cost</i> is how much from <i>Area</i> the card take from.
-            
-              For instance, whether a Ground card has Area of 5, the player only can stack a total of 5 on the card, for example two
-              card with cost of 2 and one with cost of 1.
-            
-              Lastly, the <i>Capacity</i> attribute is how many cards of that type the player can put on the board. Whether there are two
-              cards in game with Capacity of 2, another one only can be placed on the board if one of these cards is discarded.
-            </p>
-        
-            <h4>Attacks</h4>
-        
-            <p>
-              Attacks can be executed against any type of card. If an attack is directed against a Ground card and there are Braves
-              on it, the Braves shall defend the Ground with their Defense attribute. If the Ground is hit by an attack greater than
-              the sum of defenses, the Ground is discarded and the Braves stay inactives until another Ground is put in game under
-              them. In this case, the Braves can receive attacks and cannot be moved to Castle neither to another Ground.
-            </p>
-        
-        
-            <h4>Turns</h4>
-        
-            <p>
-              The turns are basicaly when the player of the turn can draw the card and execute movements. The movements can be
-              attacks or movement of troops going from a Ground to another one or to the Castle. The player can place in game as
-              many cards as needed in this moment.
-            </p>
-        
-            <h4>Decks and number of cards</h4>
-        
-            <p>
-              There are three types of decks:
-            </p>
-            <ul>
-              <li><span style="color:purple"><i>Dread cards</i> (purple)</span></li>
-              <li><span style="color:darkgreen"><i>Holy cards</i> (green)</span></li>
-              <li><span style="color:darkred"><i>Bloody cards</i> (red)</span></li>
-            </ul>
-        
-            <p>
-              The players can choose their deck cards freely, respecting the limit of 50 cards. <i>(The Castle is not counted for the
+
+          <h4>
+            Cards in Hallowed Grounds
+          </h4>
+
+          <p>
+            There are three types of cards:
+          </p>
+
+          <ul>
+            <li>
+              Castle
+            </li>
+            <li>
+              Ground
+            </li>
+            <li>
+              Brave
+            </li>
+          </ul>
+
+          <p>
+            The <i>Castle</i> type is the life total of a player, the very first card on the board and it has 30 of life
+            in a
+            total, called <i>Defense</i>. This card has two attributes, <i>Defense</i> and <i>Area</i>.
+
+            The <i>Ground</i> type is the land where the braves battle. This card has four attributes, <i>Defense</i>,
+            <i>Area</i>, <i>Capacity</i> and <i>Cost</i>.
+
+            The <i>Brave</i> type is the soldier-like, that can attack or protect. This card has three attributes,
+            <i>Defense</i>, <i>Attack</i>, and <i>Cost</i>.
+          </p>
+
+          <h4>Attributes</h4>
+
+
+          <p>
+            There are five card attributes:
+          </p>
+
+          <ul>
+            <li>
+              Attack
+            </li>
+            <li>
+              Defense
+            </li>
+            <li>
+              Area
+            </li>
+            <li>
+              Capacity
+            </li>
+            <li>
+              Cost
+            </li>
+          </ul>
+
+          <p>
+            Basicaly, the <i>Defense</i> attribute is the capabillity to defend an attack. The card is removed from the
+            game when the
+            <i>Attack</i> is greater than the <i>Defense</i>. Thus, the card that received the "damage" is discarded to
+            the "discard pile".
+            If the card is defending a castle from a direct attack to it, the card is not discarded because the attack
+            was made
+            against the <i>Castle</i>.
+
+            The <i>Area</i> attribute is how many <i>Brave</i> cards can be stack over it. Only the Castle and Ground
+            have this attribute.
+            On the other hand the <i>Cost</i> is how much from <i>Area</i> the card take from.
+
+            For instance, whether a Ground card has Area of 5, the player only can stack a total of 5 on the card, for
+            example two
+            card with cost of 2 and one with cost of 1.
+
+            Lastly, the <i>Capacity</i> attribute is how many cards of that type the player can put on the board.
+            Whether there are two
+            cards in game with Capacity of 2, another one only can be placed on the board if one of these cards is
+            discarded.
+          </p>
+
+          <h4>Attacks</h4>
+
+          <p>
+            Attacks can be executed against any type of card. If an attack is directed against a Ground card and there
+            are Braves
+            on it, the Braves shall defend the Ground with their Defense attribute. If the Ground is hit by an attack
+            greater than
+            the sum of defenses, the Ground is discarded and the Braves stay inactives until another Ground is put in
+            game under
+            them. In this case, the Braves can receive attacks and cannot be moved to Castle neither to another Ground.
+          </p>
+
+
+          <h4>Turns</h4>
+
+          <p>
+            The turns are basicaly when the player of the turn can draw the card and execute movements. The movements
+            can be
+            attacks or movement of troops going from a Ground to another one or to the Castle. The player can place in
+            game as
+            many cards as needed in this moment.
+          </p>
+
+          <h4>Decks and number of cards</h4>
+
+          <p>
+            There are three types of decks:
+          </p>
+          <ul>
+            <li><span style="color:purple"><i>Dread cards</i> (purple)</span></li>
+            <li><span style="color:darkgreen"><i>Holy cards</i> (green)</span></li>
+            <li><span style="color:darkred"><i>Bloody cards</i> (red)</span></li>
+          </ul>
+
+          <p>
+            The players can choose their deck cards freely, respecting the limit of 50 cards. <i>(The Castle is not
+              counted for the
               number of deck cards.)</i>
-            
-              Mixed decks are for adventurers. When a mixed deck is created, only the cards with their respective card colours can
-              be place on the <i>Ground</i> card, Brave cards in purple with Ground cards in purple and so on.
-            
-              To start the match, players need to shuffle the decks and draw 7 cards, each Castle is placed on the board and the
-              player who starts the turn is decided by agreement between the players.
-            </p>
+
+            Mixed decks are for adventurers. When a mixed deck is created, only the cards with their respective card
+            colours can
+            be place on the <i>Ground</i> card, Brave cards in purple with Ground cards in purple and so on.
+
+            To start the match, players need to shuffle the decks and draw 7 cards, each Castle is placed on the board
+            and the
+            player who starts the turn is decided by agreement between the players.
+          </p>
         </div>
       </div>
       <p>
@@ -169,13 +188,16 @@
       <p>
         <a href="#" class="game-index border-index">BATTLE!</a>
       </p>
+      <p>
+        <a class="game-index border-index" onclick="hideShow()">Store</a>
+      </p>
     </div>
-  
+
     <div>
       <!-- <div class="card-box-outer" style="z-index: 1; border: 2px ridge gray; height: 90%; position: fixed; right: 0;">
       </div> -->
       <div class="card-box-inter" style="z-index: 2;">
-        <div id="cardDiv" class="card-div"></div>
+        <div id="cardDiv" class="card-div hide"></div>
       </div>
     </div>
 
