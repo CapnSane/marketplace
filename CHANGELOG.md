@@ -3,6 +3,31 @@
 
 All notable changes to this project will be documented in this file.
 
+# [0.0.1] - 2020-02-16
+### Added
+- Shopping cart added.
+- Cards can be removed when it is clicked.
+
+### Changed
+No changes.
+
+### Removed
+No removal.
+
+---
+
+# [0.0.1] - 2020-02-15
+### Added
+No additions.
+
+### Changed
+= Card screen modified to show or hide the cards when _Store_ button is clicked.
+
+### Removed
+No removal.
+
+---
+
 # [0.0.1] - 2020-02-11
 ### Added
 - Initial game page.
