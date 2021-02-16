@@ -6,7 +6,9 @@ let App = {
     // locSearch.has("/cards.html") ? this.controllers.createSnow() : this.controllers.createFire();
 
   },
-  store: {},
+  store: {
+    cart: [],
+  },
   controllers: {
     createCards: function () {
       for (let i = 0; i < cards.length; i++) {

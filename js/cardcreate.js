@@ -11,7 +11,7 @@ function createCard(i) {
   const cardStats3 = document.createElement("div");
   const cardStats4 = document.createElement("div");
 
-  let cardobj = cards[i];
+  const cardObj = cards[i];
 
   // Card base - Here is where the card elements are appended
   cardBg.style.display = "grid";
@@ -20,9 +20,9 @@ function createCard(i) {
   cardBg.style.width = "304px";
   cardBg.style.gridTemplateRows = "210px 210px 80px";
   cardBg.style.gridTemplateAreas = "image text stats";
-  cardBg.style.border = "2px solid " + cardobj.color;
+  cardBg.style.border = "2px solid " + cardObj.color;
   cardBg.style.borderRadius = "18px";
-  cardBg.style.background = cardobj.color;
+  cardBg.style.background = cardObj.color;
   cardBg.style.boxShadow = "5px 5px 15px rgba(0,0,0,0.9)";
   cardBg.style.fontFamily = "roboto";
   cardBg.style.textAlign = "center";
@@ -30,7 +30,9 @@ function createCard(i) {
   cardBg.style.cursor = "pointer";
   cardBg.style.margin = "30px";
   cardBg.style.float = "right";
-  cardBg.setAttribute("id", cardobj.id);
+  cardBg.setAttribute("id", cardObj.id);
+  cardBg.setAttribute("onclick",`handleCard(this)`);
+  // cardBg.setAttribute("onclick",`removeCard(${cardObj.id})`);
   cardBg.onmouseover = function () {
     this.style.transform = "scale(108%)";
     this.style.boxShadow = "5px 5px 25px rgba(0, 0, 0, 0.6)";
@@ -41,7 +43,7 @@ function createCard(i) {
   };
 
   // Card image
-  cardImg.style.background = cardobj.img;
+  cardImg.style.background = cardObj.img;
   cardImg.style.backgroundSize = "cover";
   cardImg.style.borderTopLeftRadius = "15px";
   cardImg.style.borderTopRightRadius = "15px";
@@ -56,19 +58,19 @@ function createCard(i) {
   cardType.style.background = "rgb(230,230,230)";
   cardType.style.borderRadius = "30px";
   cardType.style.padding = "0 8px 0 8px";
-  cardType.style.color = cardobj.color;
-  cardType.innerHTML = cardobj.type;
+  cardType.style.color = cardObj.color;
+  cardType.innerHTML = cardObj.type;
   
   // Card title text
-  cardTitle.innerHTML = cardobj.name;
+  cardTitle.innerHTML = cardObj.name;
   cardTitle.style.marginTop = "8px";
-  cardTitle.style.color = cardobj.color;
+  cardTitle.style.color = cardObj.color;
   cardTitle.style.fontSize = "24px";
   cardTitle.style.fontWeight = "bold";
   
   // Card description text
-  cardDescription.innerHTML = cardobj.description;
-  cardDescription.style.color = cardobj.color;
+  cardDescription.innerHTML = cardObj.description;
+  cardDescription.style.color = cardObj.color;
   cardDescription.style.padding = "6px 20px 0 20px";
   cardDescription.style.fontSize = "13px";
   cardDescription.style.textAlign= "center";
@@ -84,9 +86,9 @@ function createCard(i) {
   cardStats.style.gridArea = "stats;"
   cardStats.style.display = "grid";
 
-  if (cardobj.type == "Ground") {
+  if (cardObj.type == "Ground") {
     cardStats.style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
-  } else if (cardobj.type == "Castle") {
+  } else if (cardObj.type == "Castle") {
     cardStats.style.gridTemplateColumns = "1fr 1fr";
   } else {
     cardStats.style.gridTemplateColumns = "1fr 1fr 1fr";
@@ -98,20 +100,20 @@ function createCard(i) {
   cardStats.style.padding = "20px 15px 0 15px";
   cardStats.style.color = "white";
   cardStats.style.fontSize = "16px";
-  cardStats.style.background = cardobj.color;
+  cardStats.style.background = cardObj.color;
 
-  if (cardobj.type == "Ground") {
-    cardStats1.innerHTML = cardobj.area + "<br>" + "Area";
-    cardStats2.innerHTML = cardobj.defense + "<br>" + "Defense";
-    cardStats3.innerHTML = cardobj.capacity + "<br>" + "Capacity";
-    cardStats4.innerHTML = cardobj.cost + "<br>" + "Cost";
-  } else if (cardobj.type == "Castle") {
-    cardStats1.innerHTML = cardobj.area + "<br>" + "Area";
-    cardStats2.innerHTML = cardobj.defense + "<br>" + "Defense";
+  if (cardObj.type == "Ground") {
+    cardStats1.innerHTML = cardObj.area + "<br>" + "Area";
+    cardStats2.innerHTML = cardObj.defense + "<br>" + "Defense";
+    cardStats3.innerHTML = cardObj.capacity + "<br>" + "Capacity";
+    cardStats4.innerHTML = cardObj.cost + "<br>" + "Cost";
+  } else if (cardObj.type == "Castle") {
+    cardStats1.innerHTML = cardObj.area + "<br>" + "Area";
+    cardStats2.innerHTML = cardObj.defense + "<br>" + "Defense";
   } else {
-    cardStats1.innerHTML = cardobj.attack + "<br>" + "Attack";
-    cardStats2.innerHTML = cardobj.defense + "<br>" + "Defense";
-    cardStats3.innerHTML = cardobj.cost + "<br>" + "Cost";
+    cardStats1.innerHTML = cardObj.attack + "<br>" + "Attack";
+    cardStats2.innerHTML = cardObj.defense + "<br>" + "Defense";
+    cardStats3.innerHTML = cardObj.cost + "<br>" + "Cost";
   };
 
   cardStats1.onmouseover = function () {
@@ -152,9 +154,9 @@ function createCard(i) {
   cardStats.appendChild(cardStats4);
 }
 // for (let i = 0; i < cards.length; i++) {
-//   let cardobj = cards[i];
+//   let cardObj = cards[i];
 // }
-// console.log(cardobj.img);
+// console.log(cardObj.img);
 
 
 

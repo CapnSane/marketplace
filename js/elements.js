@@ -1,10 +1,12 @@
-function hideShow() {
-  var x = document.getElementById("cardDiv");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+// Toggle function: hide and show
+function toggleShop() {
+  var x = document.getElementById("shop");
+  // if (x.style.display === "none") {
+  //   x.style.display = "block";
+  // } else {
+  //   x.style.display = "none";
+  // }
+  x.classList.toggle("hide");
 }
 
 // Get the modal
@@ -31,4 +33,13 @@ window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
+
+// Click counter
+function handleCard(card) {
+  // document.getElementById(cardObj.id).remove();
+  console.log(card.getAttribute("id"));
+  App.store.cart.push(card.getAttribute("id"));
+  document.getElementById("cardCount").innerHTML = App.store.cart.length;
+  card.classList.add("hide");
 }

@@ -189,15 +189,18 @@
         <a href="#" class="game-index border-index">BATTLE!</a>
       </p>
       <p>
-        <a class="game-index border-index" onclick="hideShow()">Store</a>
+        <a class="game-index border-index" onclick="toggleShop()">Store</a>
       </p>
     </div>
 
     <div>
       <!-- <div class="card-box-outer" style="z-index: 1; border: 2px ridge gray; height: 90%; position: fixed; right: 0;">
       </div> -->
-      <div class="card-box-inter" style="z-index: 2;">
-        <div id="cardDiv" class="card-div hide"></div>
+      <div id="shop" class="card-box-inter hide" style="z-index: 2;">
+        <div class="header">
+          <a href="/cart.html" class="header-cart"><span id="cardCount" style="font-size: 20px !important; margin-right: 5px;"></span>&#x1f6d2;</a>
+        </div>
+        <div id="cardDiv" class="card-div">BUY!</div>
       </div>
     </div>
 

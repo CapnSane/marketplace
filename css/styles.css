@@ -101,6 +101,29 @@ p {
   }
 }
 
+.header {
+  width: 100%;
+  align-items: center;
+  top: 0;
+}
+
+.header-cart {
+  position: fixed;
+  top: 0;
+  right: 10px;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  z-index: 4;
+  text-decoration: none;
+  outline: none;
+}
+
+.header-cart:hover {
+  transform: scale(103%);
+  color: white;
+}
+
 .black-footer {
   z-index: 2;
   background-color: black;
@@ -136,7 +159,7 @@ p {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .index-div {
@@ -157,7 +180,6 @@ p {
 
 .card-box-inter {
   position: relative;
-  display: block;
   margin: 50px 55px 0 0;
   /* padding: 0 0 0 500px; */
   width: 58%;
