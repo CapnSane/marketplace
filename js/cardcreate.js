@@ -30,6 +30,7 @@ function createCard(i) {
   cardBg.style.cursor = "pointer";
   cardBg.style.margin = "30px";
   cardBg.style.float = "right";
+  cardBg.setAttribute("id", cardobj.id);
   cardBg.onmouseover = function () {
     this.style.transform = "scale(108%)";
     this.style.boxShadow = "5px 5px 25px rgba(0, 0, 0, 0.6)";
