@@ -140,6 +140,7 @@ p {
   z-index: 4;
   text-decoration: none;
   outline: none;
+  cursor: pointer;
 }
 
 .header-cart:hover {
