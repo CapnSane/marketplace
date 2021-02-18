@@ -204,11 +204,13 @@
         <div class="card-shop" onscroll="scroll()">Shop</div>
         <div id="cardDiv" class="card-div"></div>
         <div class="header">
-          <a id="shopBtn" class="header-cart"><span id="cardCount" style="font-size: 20px !important;"></span>&#x1f6d2;</a>
+          <input type="text" id="myInput"  class="header" onkeyup="myFunction()" placeholder="Search for cards.." title="Type in the name, colour or card type.">
+          <a id="shopBtn" class="header-cart">
+            <span id="cardCount" style="font-size: 20px !important;"></span>&#x1f6d2;</a>
         </div>
       </div>
       <div id="shopModal" class="modal">
-        <div class="modal-content"><span id="closeShop" class="close">&times;</span><p>JORJEEEE</p></div>
+        <div class="modal-content"><span id="closeShop" class="close">&times;</span><p>CARTASCARTAS</p></div>
       </div>
     </div>
 
@@ -228,8 +230,8 @@
       <div id="card-position" class="col"></div>
     </div>
   </div> -->
-  <script src="js/elements.js"></script>
   <script src="js/cards.js"></script>
+  <script src="js/elements.js"></script>
   <script src="js/animabg.js"></script>
   <script src="js/cardcreate.js"></script>
   <script src="js/main.js"></script>
