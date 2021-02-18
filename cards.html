@@ -23,15 +23,16 @@
 
   <div class="two-column-div">
     <div class="index-div">
+      <div id="overlay" class="overlay viner-font" onclick="off()"> Coming soon!</div>
       <p>
-        <a id="myBtn" class="game-index border-index popup" onclick="myFunction()">RULES
+        <a id="myBtn" class="game-index border-index">RULES
         </a>
       </p>
       <!-- The Modal Box of Rules-->
       <div id="myModal" class="modal">
         <!-- Modal content (Rules) -->
         <div class="modal-content">
-          <span class="close">&times;</span>
+          <span id="closeRules" class="close">&times;</span>
           <p>
             <strong>Hallowed Grounds</strong> is a card game that involves two or three players who are engaged in a
             battle of
@@ -174,19 +175,19 @@
         </div>
       </div>
       <p>
-        <a href="#" class="game-index border-index">TUTORIAL</a>
+        <a href="#" class="game-index border-index" onclick="on()">TUTORIAL</a>
       </p>
       <!-- <p>
         <a href="#" class="game-index border-index">SHOW ALL CARDS</a>
       </p> -->
       <p>
-        <a href="#" class="game-index border-index">CREATE DECK</a>
+        <a href="#" class="game-index border-index" onclick="on()">CREATE DECK</a>
       </p>
       <p>
-        <a href="#" class="game-index border-index">MY DECKS</a>
+        <a href="#" class="game-index border-index" onclick="on()">MY DECKS</a>
       </p>
       <p>
-        <a href="#" class="game-index border-index">BATTLE!</a>
+        <a href="#" class="game-index border-index" onclick="on()">BATTLE!</a>
       </p>
       <p>
         <a class="game-index border-index" onclick="toggleShop()">Store</a>
@@ -197,10 +198,14 @@
       <!-- <div class="card-box-outer" style="z-index: 1; border: 2px ridge gray; height: 90%; position: fixed; right: 0;">
       </div> -->
       <div id="shop" class="card-box-inter hide" style="z-index: 2;">
+        <div class="card-shop">Shop</div>
+        <div id="cardDiv" class="card-div"></div>
         <div class="header">
-          <a href="/cart.html" class="header-cart"><span id="cardCount" style="font-size: 20px !important; margin-right: 5px;"></span>&#x1f6d2;</a>
+          <a id="shopBtn" class="header-cart"><span id="cardCount" style="font-size: 20px !important; margin-right: 5px;"></span>&#x1f6d2;</a>
         </div>
-        <div id="cardDiv" class="card-div">BUY!</div>
+      </div>
+      <div id="shopModal" class="modal">
+        <div class="modal-content"><span id="closeShop" class="close">&times;</span><p>JORJEEEE</p></div>
       </div>
     </div>
 
