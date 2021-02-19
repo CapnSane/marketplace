@@ -33,7 +33,7 @@ window.onclick = function (event) {
 // Click counter
 function handleCard(card) {
   // console.log(card.getAttribute("id"));
-  App.store.cart.push(card.getAttribute("id"));
+  App.store.cart.push(parseInt(card.getAttribute("id")));
   document.getElementById("cardCount").innerHTML = App.store.cart.length;
   card.classList.add("hide");
 }
@@ -47,6 +47,9 @@ var closeShop = document.getElementById("closeShop");
 // When the user clicks the button, open the Shop modal 
 btnShop.onclick = function () {
   modalShop.style.display = "block";
+
+  console.log(App.store.cart);
+  console.log(cards.filter(card => App.store.cart.includes(card.id)));
 }
 // When the user clicks on <closeShop> (x), close the Shop modal
 closeShop.onclick = function () {
@@ -67,3 +70,9 @@ function on() {
 function off() {
   document.getElementById("overlay").style.display = "none";
 }
+
+// function putOnCart() {
+//   cards.filter(card => App.store.cart.includes(card.id));
+// }
+
+// console.log(cards.filter(card => App.store.cart.includes(card.id)));
