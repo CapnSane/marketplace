@@ -1,4 +1,5 @@
 function createCard(cardObj) {
+  const divParent = document.createElement("div");
   const cardBg = document.createElement("div");
   const cardImg = document.createElement("div");
   const cardText = document.createElement("div");
@@ -10,6 +11,15 @@ function createCard(cardObj) {
   const cardStats2 = document.createElement("div");
   const cardStats3 = document.createElement("div");
   const cardStats4 = document.createElement("div");
+  const priceDiv = document.createElement("div");
+
+  // Div of Divs
+  divParent.style.display = "grid";
+  divParent.style.zIndex = "2";
+  divParent.style.float = "left";
+  divParent.style.textAlign = "center";
+  divParent.setAttribute("onclick",`handleCard(this)`);
+
 
   // Card base - Here is where the card elements are appended
   cardBg.style.display = "grid";
@@ -27,17 +37,18 @@ function createCard(cardObj) {
   cardBg.style.transition = "0.5s ease";
   cardBg.style.cursor = "pointer";
   cardBg.style.margin = "30px";
-  cardBg.style.float = "right";
+  cardBg.style.float = "left";
   cardBg.setAttribute("id", cardObj.id);
-  cardBg.setAttribute("onclick",`handleCard(this)`);
   // cardBg.setAttribute("onclick",`removeCard(${cardObj.id})`);
   cardBg.onmouseover = function () {
     this.style.transform = "scale(108%)";
     this.style.boxShadow = "5px 5px 25px rgba(0, 0, 0, 0.6)";
+    priceDiv.classList.add("blink")
   };
   cardBg.onmouseout = function () {
     this.style.transform = "scale(100%)";
     this.style.boxShadow = "5px 5px 15px rgba(0,0,0,0.9)";
+    priceDiv.classList.remove("blink")
   };
 
   // Card image
@@ -138,8 +149,17 @@ function createCard(cardObj) {
   cardStats4.onmouseout = function () {
     this.style.fontWeight = "normal";
   };
+  
+  priceDiv.innerHTML = "US$ " + cardObj.price;
+  priceDiv.style.color = "white";
+  priceDiv.style.textShadow = "3px 3px 5px black";
+  priceDiv.style.fontSize = "36px";
+  priceDiv.style.marginBottom = "50px";
+  priceDiv.style.fontWeight = "bold";
 
-  document.getElementById("cardDiv").appendChild(cardBg);
+  document.getElementById("cardDiv").appendChild(divParent);
+  divParent.appendChild(cardBg);
+  cardBg.appendChild(cardImg);
   cardBg.appendChild(cardImg);
   cardBg.appendChild(cardText);
   cardText.appendChild(cardType);
@@ -150,6 +170,7 @@ function createCard(cardObj) {
   cardStats.appendChild(cardStats1);
   cardStats.appendChild(cardStats3);
   cardStats.appendChild(cardStats4);
+  divParent.appendChild(priceDiv);
 
   return cardBg;
 }
