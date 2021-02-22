@@ -71,8 +71,50 @@ function off() {
   document.getElementById("overlay").style.display = "none";
 }
 
-// function putOnCart() {
-//   cards.filter(card => App.store.cart.includes(card.id));
-// }
+// Search bar
+function searchBar() {
+  // console.log(input.value);
+  // cards.map(card => {
+  //   console.log("filtrar! ", card.type)
+  // });
+  // cards.map(card => {console.log(document.getElementById(card.id))});
+  // const text = event.element.value;
+  // console.log(text);
+  // cards.map(card => {
+  //   const input = document.getElementById("myInput");
+  //   console.log("filtrar! ", card.type)
+  //   console.log("match com: ", text)
+  //   console.log("elemento: ", cardElem)
+  //   console.log("includes:", card.type.includes(text))
+  // })
 
-// console.log(cards.filter(card => App.store.cart.includes(card.id)));
+  // const text = document.getElementById("myInput").value;
+  // console.log(text);
+  // cards.map(card => {
+  //   console.log("filtrar! ", card.type)
+  //   console.log("match com: ", text)
+  //   console.log("elemento: ", cardElem)
+  //   console.log("includes:", card.type.toLowerCase().includes(text.toLowerCase()))
+  // })
+  const text = document.getElementById("myInput").value;
+  cards.forEach((card, index) => {
+    const cardBg = App.elements.cards[index];
+    if (
+      card.type.toLowerCase().includes(text.toLowerCase()) ||
+      card.name.toLowerCase().includes(text.toLowerCase()) ||
+      card.defense == text ||
+      card.area == text ||
+      card.attack == text ||
+      card.cost == text ||
+      card.price == text
+    ) {
+      // Mostra carta
+      cardBg.classList.remove("hide")
+    } else {
+      // esconde carta
+      cardBg.classList.add("hide")
+    }
+  })
+
+
+}

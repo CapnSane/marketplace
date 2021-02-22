@@ -1,4 +1,4 @@
-function createCard(i) {
+function createCard(cardObj) {
   const cardBg = document.createElement("div");
   const cardImg = document.createElement("div");
   const cardText = document.createElement("div");
@@ -10,8 +10,6 @@ function createCard(i) {
   const cardStats2 = document.createElement("div");
   const cardStats3 = document.createElement("div");
   const cardStats4 = document.createElement("div");
-
-  const cardObj = cards[i];
 
   // Card base - Here is where the card elements are appended
   cardBg.style.display = "grid";
@@ -152,6 +150,8 @@ function createCard(i) {
   cardStats.appendChild(cardStats1);
   cardStats.appendChild(cardStats3);
   cardStats.appendChild(cardStats4);
+
+  return cardBg;
 }
 // for (let i = 0; i < cards.length; i++) {
 //   let cardObj = cards[i];

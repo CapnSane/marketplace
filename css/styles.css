@@ -292,6 +292,7 @@ p {
   right: 90px;
   top: 5px;
   border: 2px solid purple;
+  z-index: 4;
 }
 
 #myUL {
