@@ -34,10 +34,14 @@ window.onclick = function (event) {
 function handleCard(card) {
   // console.log(card.getAttribute("id"));
   const clone = card.cloneNode(true);
-  clone.style.textAlign = "left";
-  clone.style.display = "grid";
+  clone.firstChild.style.display = "grid";
+  clone.style.textAlign = "center";
+  clone.style.margin = "0 0 0 0";
+  clone.style.width = "360px";
+  clone.style.float = "none";
   clone.firstChild.nextSibling.classList.remove("blink");
   clone.style.transform = "scale(50%)";
+  clone.firstChild.nextSibling.style.fontSize = "60px";
   clone.onclick = function () {
     this.remove();
     card.classList.remove("hide");
@@ -89,25 +93,22 @@ function searchBar() {
 
   const text = document.getElementById("myInput").value;
   cards.forEach((card, index) => {
-    const cardBg = App.elements.cards[index];
+    const divParent = App.elements.cards[index];
     if (
       card.type.toLowerCase().includes(text.toLowerCase()) ||
       card.name.toLowerCase().includes(text.toLowerCase()) ||
+      card.colorName.toLowerCase().includes(text.toLowerCase()) ||
       card.defense == text ||
       card.area == text ||
       card.attack == text ||
       card.cost == text ||
       card.price == text
     ) {
-      // Mostra carta
-      cardBg.classList.remove("hide")
+      // Show card
+      divParent.classList.remove("hide")
     } else {
-      // esconde carta
-      cardBg.classList.add("hide")
+      // Hide card
+      divParent.classList.add("hide")
     }
   })
-
-  function shopCards() {
-    
-  }
 }
