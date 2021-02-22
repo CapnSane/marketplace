@@ -33,7 +33,21 @@ window.onclick = function (event) {
 // Click counter
 function handleCard(card) {
   // console.log(card.getAttribute("id"));
-  App.store.cart.push(parseInt(card.getAttribute("id")));
+  const clone = card.cloneNode(true);
+  clone.style.textAlign = "left";
+  clone.style.display = "grid";
+  clone.firstChild.nextSibling.classList.remove("blink");
+  clone.style.transform = "scale(50%)";
+  clone.onclick = function () {
+    this.remove();
+    card.classList.remove("hide");
+    App.store.cart = App.store.cart.filter(c => card.firstChild.getAttribute("id") != c);
+    document.getElementById("cardCount").innerHTML = App.store.cart.length;
+    console.log(App.store.cart = App.store.cart.filter(c => card.firstChild.getAttribute("id") != c));
+  }
+
+  document.getElementById("shopDiv").appendChild(clone);
+  App.store.cart.push(parseInt(card.firstChild.getAttribute("id")));
   document.getElementById("cardCount").innerHTML = App.store.cart.length;
   card.classList.add("hide");
 }
@@ -66,36 +80,13 @@ window.onclick = function (event) {
 function on() {
   document.getElementById("overlay").style.display = "block";
 }
-
 function off() {
   document.getElementById("overlay").style.display = "none";
 }
 
 // Search bar
 function searchBar() {
-  // console.log(input.value);
-  // cards.map(card => {
-  //   console.log("filtrar! ", card.type)
-  // });
-  // cards.map(card => {console.log(document.getElementById(card.id))});
-  // const text = event.element.value;
-  // console.log(text);
-  // cards.map(card => {
-  //   const input = document.getElementById("myInput");
-  //   console.log("filtrar! ", card.type)
-  //   console.log("match com: ", text)
-  //   console.log("elemento: ", cardElem)
-  //   console.log("includes:", card.type.includes(text))
-  // })
 
-  // const text = document.getElementById("myInput").value;
-  // console.log(text);
-  // cards.map(card => {
-  //   console.log("filtrar! ", card.type)
-  //   console.log("match com: ", text)
-  //   console.log("elemento: ", cardElem)
-  //   console.log("includes:", card.type.toLowerCase().includes(text.toLowerCase()))
-  // })
   const text = document.getElementById("myInput").value;
   cards.forEach((card, index) => {
     const cardBg = App.elements.cards[index];
@@ -116,5 +107,7 @@ function searchBar() {
     }
   })
 
-
+  function shopCards() {
+    
+  }
 }
