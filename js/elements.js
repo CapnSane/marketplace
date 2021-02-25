@@ -42,6 +42,22 @@ function handleCard(card) {
   clone.firstChild.nextSibling.classList.remove("blink");
   clone.style.transform = "scale(50%)";
   clone.firstChild.nextSibling.style.fontSize = "60px";
+  let buyButton = document.createElement("button");
+  buyButton.innerText = "BUY!";
+  buyButton.style.border = "2px solid black";
+  buyButton.style.boxShadow = "3px 3px 10px black";
+  buyButton.style.marginLeft = "30px";
+  buyButton.style.borderRadius = "15px";
+  buyButton.style.fontWeight = "bold";
+  buyButton.style.backgroundColor = "rgb(234, 255, 0)";
+  buyButton.onmouseover = function () {
+    buyButton.style.backgroundColor = "rgb(236, 255, 30)";
+    buyButton.style.transform = "scale(104%)";
+  }
+  buyButton.onmouseout = function () {
+    buyButton.style.backgroundColor = "rgb(234, 255, 0)";
+    buyButton.style.transform = "scale(100%)";
+  }
   
   
   clone.onclick = function () {
@@ -55,6 +71,8 @@ function handleCard(card) {
     let cartCards = App.store.cart.map(id => App.model.cards.filter(card => card.id == id)[0]);
     let priceResult = (cartCards.map(card => card.price).reduce((acc,price) => acc + price, 0)).toFixed(2);
     document.getElementById("priceSum").innerHTML = "Total price: US$" + priceResult;
+    document.getElementById("priceSum").appendChild(buyButton);
+
     if (cartCards.length == 0) {
       modalShop.style.display = "none";
     }
@@ -71,6 +89,7 @@ function handleCard(card) {
   let cartCards = App.store.cart.map(id => App.model.cards.filter(card => card.id == id)[0]);
   let priceResult = (cartCards.map(card => card.price).reduce((acc,price) => acc + price, 0)).toFixed(2);
   document.getElementById("priceSum").innerText = "Total price: US$" + priceResult;
+  document.getElementById("priceSum").appendChild(buyButton);
 
   // console.log((cartCards.map(card => card.price).reduce((acc,price) => acc + price, 0)).toFixed(2));
   // console.log(cartCards);
