@@ -184,7 +184,7 @@
         <a href="#" class="game-index border-index">SHOW ALL CARDS</a>
       </p> -->
       <p>
-        <a href="#" class="game-index border-index" onclick="on()">CREATE DECK</a>
+        <a href="#" class="game-index border-index" onclick="myCardsClick()">MY CARDS</a>
       </p>
       <p>
         <a href="#" class="game-index border-index" onclick="on()">MY DECKS</a>
@@ -200,6 +200,7 @@
     <div>
       <!-- <div class="card-box-outer" style="z-index: 1; border: 2px ridge gray; height: 90%; position: fixed; right: 0;">
       </div> -->
+      <div id="myCardsDiv" class="card-box-inter" style="z-index: 2;"></div>
       <div id="shop" class="card-box-inter hide" style="z-index: 2;">
         <div class="card-shop" onscroll="scroll()">Shop</div>
         <div id="cardDiv" class="card-div"></div>
@@ -210,11 +211,11 @@
         </div>
       </div>
       <div id="shopModal" class="modal" style="width: 100%;">
-        <div id="shopDiv" class="modal-content" style="flex-direction: initial !important; width: auto !important; float: left !important;">
-          <span id="closeShop" class="close" style="height: 2vw;">&times;</span>
-          <p class="shop-text">Shop <br></p>
-          <div id="priceSum" class="price-sum"></div>
+        <div id="shopDiv" class="modal-content" style="flex-direction: initial !important; min-width: 33vw !important; float: left !important;">
         </div>
+        <span id="closeShop" class="close" style="height: 2vw;">&times;</span>
+        <!-- <p class="shop-text">Shop <br></p> -->
+        <div id="priceSum" class="price-sum"></div>
       </div>
     </div>
 

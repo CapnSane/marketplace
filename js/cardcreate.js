@@ -1,4 +1,5 @@
 function createCard(cardObj) {
+  
   const divParent = document.createElement("div");
   const cardBg = document.createElement("div");
   const cardImg = document.createElement("div");
@@ -11,17 +12,14 @@ function createCard(cardObj) {
   const cardStats2 = document.createElement("div");
   const cardStats3 = document.createElement("div");
   const cardStats4 = document.createElement("div");
-  const priceDiv = document.createElement("div");
 
   // Div of Divs
   divParent.style.display = "grid";
   divParent.style.zIndex = "2";
   divParent.style.float = "left";
   divParent.style.textAlign = "center";
-  divParent.setAttribute("onclick",`handleCard(this)`);
   divParent.setAttribute("id", cardObj.id);
-
-
+  
   // Card base - Here is where the card elements are appended
   cardBg.style.display = "grid";
   cardBg.style.zIndex = "2";
@@ -42,12 +40,10 @@ function createCard(cardObj) {
   cardBg.onmouseover = function () {
     this.style.transform = "scale(108%)";
     this.style.boxShadow = "5px 5px 25px rgba(0, 0, 0, 0.6)";
-    priceDiv.classList.add("blink")
   };
   cardBg.onmouseout = function () {
     this.style.transform = "scale(100%)";
     this.style.boxShadow = "5px 5px 15px rgba(0,0,0,0.9)";
-    priceDiv.classList.remove("blink")
   };
 
   // Card image
@@ -101,7 +97,7 @@ function createCard(cardObj) {
   } else {
     cardStats.style.gridTemplateColumns = "1fr 1fr 1fr";
   };
-
+  
   cardStats.style.gridTemplateRows = "1fr";
   cardStats.style.borderBottomLeftRadius = "15px";
   cardStats.style.borderBottomRightRadius = "15px";
@@ -148,15 +144,7 @@ function createCard(cardObj) {
   cardStats4.onmouseout = function () {
     this.style.fontWeight = "normal";
   };
-  
-  priceDiv.innerHTML = "US$ " + cardObj.price;
-  priceDiv.style.color = "white";
-  priceDiv.style.textShadow = "3px 3px 5px black";
-  priceDiv.style.fontSize = "36px";
-  priceDiv.style.marginBottom = "50px";
-  priceDiv.style.fontWeight = "bold";
 
-  document.getElementById("cardDiv").appendChild(divParent);
   divParent.appendChild(cardBg);
   cardBg.appendChild(cardImg);
   cardBg.appendChild(cardImg);
@@ -169,15 +157,30 @@ function createCard(cardObj) {
   cardStats.appendChild(cardStats1);
   cardStats.appendChild(cardStats3);
   cardStats.appendChild(cardStats4);
-  divParent.appendChild(priceDiv);
-
+  
   return divParent;
 }
-// for (let i = 0; i < cards.length; i++) {
-//   let cardObj = cards[i];
-// }
-// console.log(cardObj.img);
 
+function createCardWithPrice(cardObj) {
+  const cardElem = createCard(cardObj);
+  const priceDiv = document.createElement("div");
+  
+  priceDiv.innerHTML = "US$ " + cardObj.price;
+  priceDiv.style.color = "white";
+  priceDiv.style.textShadow = "3px 3px 5px black";
+  priceDiv.style.fontSize = "36px";
+  priceDiv.style.marginBottom = "50px";
+  priceDiv.style.fontWeight = "bold";
+  
+  cardElem.setAttribute("onclick",`handleCard(this)`);
+  cardElem.onmouseover = function () {
+    priceDiv.classList.add("blink")
+  };
+  cardElem.onmouseout = function () {
+    priceDiv.classList.remove("blink")
+  };
+  
+  cardElem.appendChild(priceDiv);
 
-
-// createCard(0)
+  return cardElem;
+}

@@ -2,6 +2,8 @@
 function toggleShop() {
   var x = document.getElementById("shop");
   x.classList.toggle("hide");
+  var y = document.getElementById("myCardsDiv");
+  y.classList.add("hide");
   // if (x.style.display === "none") {
   //   x.style.display = "block";
   // } else {
@@ -30,6 +32,7 @@ window.onclick = function (event) {
   }
 }
 
+
 // Click counter
 function handleCard(card) {
   // console.log(card.getAttribute("id"));
@@ -42,6 +45,7 @@ function handleCard(card) {
   clone.firstChild.nextSibling.classList.remove("blink");
   clone.style.transform = "scale(50%)";
   clone.firstChild.nextSibling.style.fontSize = "60px";
+
   let buyButton = document.createElement("button");
   buyButton.innerText = "BUY!";
   buyButton.style.border = "2px solid black";
@@ -50,6 +54,8 @@ function handleCard(card) {
   buyButton.style.borderRadius = "15px";
   buyButton.style.fontWeight = "bold";
   buyButton.style.backgroundColor = "rgb(234, 255, 0)";
+  buyButton.style.outline = "none";
+  buyButton.setAttribute("id", "buyButton");
   buyButton.onmouseover = function () {
     buyButton.style.backgroundColor = "rgb(236, 255, 30)";
     buyButton.style.transform = "scale(104%)";
@@ -63,12 +69,12 @@ function handleCard(card) {
   clone.onclick = function () {
     this.remove();
     card.classList.remove("hide");
-    App.store.cart = App.store.cart.filter(c => card.getAttribute("id") != c);
-    document.getElementById("cardCount").innerHTML = App.store.cart.length;
-    console.log(App.store.cart = App.store.cart.filter(c => card.getAttribute("id") != c));
-
+    App.model.store.cart = App.model.store.cart.filter(c => card.getAttribute("id") != c);
+    document.getElementById("cardCount").innerHTML = App.model.store.cart.length;
+    console.log(App.model.store.cart = App.model.store.cart.filter(c => card.getAttribute("id") != c));
+    
     // Card prices subtraction
-    let cartCards = App.store.cart.map(id => App.model.cards.filter(card => card.id == id)[0]);
+    let cartCards = App.model.store.cart.map(id => App.model.cards.filter(card => card.id == id)[0]);
     let priceResult = (cartCards.map(card => card.price).reduce((acc,price) => acc + price, 0)).toFixed(2);
     document.getElementById("priceSum").innerHTML = "Total price: US$" + priceResult;
     document.getElementById("priceSum").appendChild(buyButton);
@@ -78,22 +84,51 @@ function handleCard(card) {
     }
   }
   
-  
   document.getElementById("shopDiv").appendChild(clone);
-  App.store.cart.push(parseInt(card.getAttribute("id")));
-  document.getElementById("cardCount").innerText = App.store.cart.length;
-  console.log(App.store.cart.length);
+  App.model.store.cart.push(parseInt(card.getAttribute("id")));
+  document.getElementById("cardCount").innerText = App.model.store.cart.length;
   card.classList.add("hide");
-
+  
   // Card prices sum
-  let cartCards = App.store.cart.map(id => App.model.cards.filter(card => card.id == id)[0]);
+  let cartCards = App.model.store.cart.map(id => App.model.cards.filter(card => card.id == id)[0]);
   let priceResult = (cartCards.map(card => card.price).reduce((acc,price) => acc + price, 0)).toFixed(2);
   document.getElementById("priceSum").innerText = "Total price: US$" + priceResult;
   document.getElementById("priceSum").appendChild(buyButton);
+  
+  // Buy button click to buy
+  document.getElementById("buyButton").onclick = () => {
+    App.model.myCards = App.model.myCards.concat(cartCards);
+    App.model.store.cart = [];
+    document.getElementById("shopDiv").innerHTML = "";
+    document.getElementById("cardCount").innerText = "0";
+    modalShop.style.display = "none";
+    const sDiv = document.createElement("div");
+    const pShop = document.createElement("p");
+    const cShop = document.createElement("span");
 
+    sDiv.setAttribute("class","modal-content");
+    sDiv.style.flexDirection = "initial !important";
+    sDiv.style.minWidth = "33vw !important";
+    sDiv.style.float = "left !important";
+    sDiv.style.top = "0 !important";
+
+    cShop.setAttribute("id","shopDiv");
+    cShop.setAttribute("class","close");
+    cShop.style.height = "2vw";
+    cShop.innerText = "x";
+
+    pShop.setAttribute("class","shop-text");
+    // pShop.innerHTML = "Shop";
+
+    document.getElementById("divExtra").appendChild(sDiv);
+    sDiv.appendChild(cShop);
+    sDiv.appendChild(pShop);
+
+
+  }
   // console.log((cartCards.map(card => card.price).reduce((acc,price) => acc + price, 0)).toFixed(2));
   // console.log(cartCards);
-  // console.log(App.store.cart.length);
+  // console.log(App.model.store.cart.length);
   // console.log(card1.map(card1 => card1.price));
   // console.log(card.price);
 }
@@ -108,8 +143,8 @@ var closeShop = document.getElementById("closeShop");
 btnShop.onclick = function () {
   modalShop.style.display = "block";
 
-  console.log(App.store.cart);
-  console.log(cards.filter(card => App.store.cart.includes(card.id)));
+  console.log(App.model.store.cart);
+  console.log(cards.filter(card => App.model.store.cart.includes(card.id)));
 }
 // When the user clicks on <closeShop> (x), close the Shop modal
 closeShop.onclick = function () {
@@ -120,6 +155,19 @@ window.onclick = function (event) {
   if (event.target == modalShop) {
     modalShop.style.display = "none";
   }
+}
+
+// My cards section
+function myCardsClick() {
+  App.elements.myCards = App.model.myCards.map(createCard);
+  const myCardsDiv = document.getElementById("myCardsDiv");
+  myCardsDiv.innerHTML = "";
+  App.elements.myCards.forEach(CardElem => myCardsDiv.appendChild(CardElem));
+  var x = document.getElementById("shop");
+  x.classList.add("hide");
+  myCardsDiv.classList.remove("hide");
+  console.log(App.elements.myCards);
+  console.log(App.model.myCards);
 }
 
 // Page overlay with coming soon

@@ -3,6 +3,44 @@
 
 All notable changes to this project will be documented in this file.
 
+# [0.0.1] - 2020-02-26
+### Added
+- Price sum added.
+- My Cards section added.
+
+### Changed
+No changes.
+
+### Removed
+No removal.
+
+---
+
+# [0.0.1] - 2020-02-22
+### Added
+- Shop added.
+- Search bar added.
+- Card prices added on the store.
+
+### Changed
+No changes.
+
+### Removed
+No removal.
+
+---
+
+# [0.0.1] - 2020-02-18
+### Added
+- Looping sounds were added (burning and snowing).
+### Changed
+No changes.
+
+### Removed
+No removal.
+
+---
+
 # [0.0.1] - 2020-02-16
 ### Added
 - Shopping cart added.

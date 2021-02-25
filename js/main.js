@@ -4,7 +4,8 @@ let App = {
     const locSearch = new URLSearchParams(document.location.pathname);
     if (locSearch.has("/cards.html")) {
       snowing()
-      App.elements.cards = App.model.cards.map(createCard)
+      App.elements.cards = App.model.cards.map(createCardWithPrice);
+      App.elements.cards.forEach(priceCardElem => document.getElementById("cardDiv").appendChild(priceCardElem));
     } else {
       burning()
     }
@@ -13,9 +14,10 @@ let App = {
   },
   model: {
     cards: cards,
-  },
-  store: {
-    cart: [],
+    myCards: [],
+    store: {
+      cart: [],
+    },
   },
   controllers: {
   },
