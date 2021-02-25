@@ -316,7 +316,20 @@ p {
   background-color: #eee;
 }
 
-.priceSum {
-  margin-bottom: 0 !important;
-  bottom: 0 !important;
+.shop-text {
+  font-weight: bold;
+  font-size: 3.6vw;
+  height: 6vw;
+  text-shadow: 3px 3px 5px white;
+  color: black;
+}
+
+.price-sum {
+  bottom: 50px !important;
+  position: absolute;
+  font-weight: bold;
+  font-size: 2vw;
+  text-align: center;
+  color: black;
+  text-shadow: 3px 3px 5px white;
 }

@@ -50,20 +50,27 @@ function handleCard(card) {
     App.store.cart = App.store.cart.filter(c => card.getAttribute("id") != c);
     document.getElementById("cardCount").innerHTML = App.store.cart.length;
     console.log(App.store.cart = App.store.cart.filter(c => card.getAttribute("id") != c));
+
+    // Card prices subtraction
     let cartCards = App.store.cart.map(id => App.model.cards.filter(card => card.id == id)[0]);
     let priceResult = (cartCards.map(card => card.price).reduce((acc,price) => acc + price, 0)).toFixed(2);
-    document.getElementById("priceSum").innerHTML = priceResult;
+    document.getElementById("priceSum").innerHTML = "Total price: US$" + priceResult;
+    if (cartCards.length == 0) {
+      modalShop.style.display = "none";
+    }
   }
   
   
   document.getElementById("shopDiv").appendChild(clone);
   App.store.cart.push(parseInt(card.getAttribute("id")));
-  document.getElementById("cardCount").innerHTML = App.store.cart.length;
+  document.getElementById("cardCount").innerText = App.store.cart.length;
   console.log(App.store.cart.length);
   card.classList.add("hide");
+
+  // Card prices sum
   let cartCards = App.store.cart.map(id => App.model.cards.filter(card => card.id == id)[0]);
   let priceResult = (cartCards.map(card => card.price).reduce((acc,price) => acc + price, 0)).toFixed(2);
-  document.getElementById("priceSum").innerHTML = priceResult;
+  document.getElementById("priceSum").innerText = "Total price: US$" + priceResult;
 
   // console.log((cartCards.map(card => card.price).reduce((acc,price) => acc + price, 0)).toFixed(2));
   // console.log(cartCards);
