@@ -1,12 +1,12 @@
 // Toggle function: hide and show
 function toggleShop() {
   var x = document.getElementById("shop");
+  x.classList.toggle("hide");
   // if (x.style.display === "none") {
   //   x.style.display = "block";
   // } else {
   //   x.style.display = "none";
   // }
-  x.classList.toggle("hide");
 }
 
 // Get the modal
@@ -34,7 +34,7 @@ window.onclick = function (event) {
 function handleCard(card) {
   // console.log(card.getAttribute("id"));
   const clone = card.cloneNode(true);
-  clone.firstChild.style.display = "grid";
+  // clone.firstChild.style.display = "grid";
   clone.style.textAlign = "center";
   clone.style.margin = "0 0 0 0";
   clone.style.width = "360px";
@@ -42,18 +42,34 @@ function handleCard(card) {
   clone.firstChild.nextSibling.classList.remove("blink");
   clone.style.transform = "scale(50%)";
   clone.firstChild.nextSibling.style.fontSize = "60px";
+  
+  
   clone.onclick = function () {
     this.remove();
     card.classList.remove("hide");
-    App.store.cart = App.store.cart.filter(c => card.firstChild.getAttribute("id") != c);
+    App.store.cart = App.store.cart.filter(c => card.getAttribute("id") != c);
     document.getElementById("cardCount").innerHTML = App.store.cart.length;
-    console.log(App.store.cart = App.store.cart.filter(c => card.firstChild.getAttribute("id") != c));
+    console.log(App.store.cart = App.store.cart.filter(c => card.getAttribute("id") != c));
+    let cartCards = App.store.cart.map(id => App.model.cards.filter(card => card.id == id)[0]);
+    let priceResult = (cartCards.map(card => card.price).reduce((acc,price) => acc + price, 0)).toFixed(2);
+    document.getElementById("priceSum").innerHTML = priceResult;
   }
-
+  
+  
   document.getElementById("shopDiv").appendChild(clone);
-  App.store.cart.push(parseInt(card.firstChild.getAttribute("id")));
+  App.store.cart.push(parseInt(card.getAttribute("id")));
   document.getElementById("cardCount").innerHTML = App.store.cart.length;
+  console.log(App.store.cart.length);
   card.classList.add("hide");
+  let cartCards = App.store.cart.map(id => App.model.cards.filter(card => card.id == id)[0]);
+  let priceResult = (cartCards.map(card => card.price).reduce((acc,price) => acc + price, 0)).toFixed(2);
+  document.getElementById("priceSum").innerHTML = priceResult;
+
+  // console.log((cartCards.map(card => card.price).reduce((acc,price) => acc + price, 0)).toFixed(2));
+  // console.log(cartCards);
+  // console.log(App.store.cart.length);
+  // console.log(card1.map(card1 => card1.price));
+  // console.log(card.price);
 }
 
 // Get the Shop modal

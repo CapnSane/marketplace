@@ -19,6 +19,7 @@ function createCard(cardObj) {
   divParent.style.float = "left";
   divParent.style.textAlign = "center";
   divParent.setAttribute("onclick",`handleCard(this)`);
+  divParent.setAttribute("id", cardObj.id);
 
 
   // Card base - Here is where the card elements are appended
@@ -38,7 +39,6 @@ function createCard(cardObj) {
   cardBg.style.cursor = "pointer";
   cardBg.style.margin = "30px";
   cardBg.style.float = "left";
-  cardBg.setAttribute("id", cardObj.id);
   cardBg.onmouseover = function () {
     this.style.transform = "scale(108%)";
     this.style.boxShadow = "5px 5px 25px rgba(0, 0, 0, 0.6)";
@@ -171,7 +171,7 @@ function createCard(cardObj) {
   cardStats.appendChild(cardStats4);
   divParent.appendChild(priceDiv);
 
-  return cardBg;
+  return divParent;
 }
 // for (let i = 0; i < cards.length; i++) {
 //   let cardObj = cards[i];

@@ -240,7 +240,7 @@ p {
 /* The Modal (background) */
 .modal {
   display: none;
-  position: fixed;
+  /* position: fixed; */
   z-index: 3;
   padding-top: 100px;
   left: 0;
@@ -314,4 +314,9 @@ p {
 
 #myUL li a:hover:not(.header) {
   background-color: #eee;
+}
+
+.priceSum {
+  margin-bottom: 0 !important;
+  bottom: 0 !important;
 }
