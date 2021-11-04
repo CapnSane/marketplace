@@ -1,6 +1,6 @@
 body,
 html {
-  background: url("/assets/winter.jpg") no-repeat center center fixed;
+  background: url("../assets/winter.jpg") no-repeat center center fixed;
   background-color: #1e2021;
   background-size: cover;
 }
@@ -22,7 +22,7 @@ body {
   height: 100%;
   z-index: 1;
   /* background-image: 
-    linear-gradient(rgba(30,32,33,0.1), rgba(30,42,53,0.1)), url("/assets/winter.jpg"); */
+    linear-gradient(rgba(30,32,33,0.1), rgba(30,42,53,0.1)), url("../assets/winter.jpg"); */
   /* background-position: bottom center; */
   background-attachment: fixed;
 }
@@ -42,7 +42,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 4;
   cursor: pointer;
 }
@@ -73,7 +73,7 @@ p {
   position: absolute;
   z-index: -1;
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("/assets/mainfire.jpg");
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("../assets/mainfire.jpg");
   /* background-size: cover; */
   background-attachment: fixed;
 }
@@ -214,6 +214,7 @@ p {
   position: relative;
   width: 100%;
 }
+
 .card-shop {
   position: relative;
   top: 0;
@@ -304,7 +305,8 @@ p {
 
 #myUL li a {
   border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
+  margin-top: -1px;
+  /* Prevent double borders */
   background-color: #f6f6f6;
   padding: 12px;
   text-decoration: none;

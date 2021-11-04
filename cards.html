@@ -13,15 +13,15 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <!-- CSS -->
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body>
   <audio autoplay loop>
-    <source src="/sounds/windsnow.mp3" >
+    <source src="sounds/windsnow.mp3">
   </audio>
 
   <div class="two-column-div">
@@ -205,13 +205,15 @@
         <div class="card-shop" onscroll="scroll()">Shop</div>
         <div id="cardDiv" class="card-div"></div>
         <div class="header">
-          <input type="text" id="myInput" class="header" oninput="searchBar()" placeholder="Search for cards.." title="Type in the name, colour or card type.">
+          <input type="text" id="myInput" class="header" oninput="searchBar()" placeholder="Search for cards.."
+            title="Type in the name, colour or card type.">
           <a id="shopBtn" class="header-cart">
             <span id="cardCount" style="font-size: 20px !important;"></span>&#x1f6d2;</a>
         </div>
       </div>
       <div id="shopModal" class="modal" style="width: 100%;">
-        <div id="shopDiv" class="modal-content" style="flex-direction: initial !important; min-width: 33vw !important; float: left !important;">
+        <div id="shopDiv" class="modal-content"
+          style="flex-direction: initial !important; min-width: 33vw !important; float: left !important;">
         </div>
         <span id="closeShop" class="close" style="height: 2vw;">&times;</span>
         <!-- <p class="shop-text">Shop <br></p> -->
