@@ -17,7 +17,7 @@ const cards = [
     price: 2.99,
     colorName: 'purple',
     color: 'purple',
-    img: "url('../assets/castledread.jpg')"
+    img: "url('assets/castledread.jpg')"
   },
   {
     id: 11,
@@ -35,7 +35,7 @@ const cards = [
     price: 3.99,
     colorName: 'purple',
     color: 'purple',
-    img: "url('../assets/dreadspot1.jpg')"
+    img: "url('assets/dreadspot1.jpg')"
   },
   {
     id: 12,
@@ -53,7 +53,7 @@ const cards = [
     price: 4.99,
     colorName: 'purple',
     color: 'purple',
-    img: "url('../assets/dreadspot2.jpg')"
+    img: "url('assets/dreadspot2.jpg')"
   },
   {
     id: 13,
@@ -71,7 +71,7 @@ const cards = [
     price: 2.99,
     colorName: 'purple',
     color: 'purple',
-    img: "url('../assets/warlockdread1.jpg')"
+    img: "url('assets/warlockdread1.jpg')"
   },
   {
     id: 14,
@@ -89,7 +89,7 @@ const cards = [
     price: 3.99,
     colorName: 'purple',
     color: 'purple',
-    img: "url('../assets/warlockdread2.jpg')"
+    img: "url('assets/warlockdread2.jpg')"
   },
   {
     id: 15,
@@ -107,7 +107,7 @@ const cards = [
     price: 3.99,
     colorName: 'purple',
     color: 'purple',
-    img: "url('../assets/witcherdread1.jpg')"
+    img: "url('assets/witcherdread1.jpg')"
   },
   {
     id: 16,
@@ -125,7 +125,7 @@ const cards = [
     price: 5.99,
     colorName: 'purple',
     color: 'purple',
-    img: "url('../assets/witcherdread2.jpg')"
+    img: "url('assets/witcherdread2.jpg')"
   },
   // Holy ground cards
   {
@@ -144,7 +144,7 @@ const cards = [
     price: 2.99,
     colorName: 'green',
     color: 'darkgreen',
-    img: "url('../assets/castleholy.jpg')"
+    img: "url('assets/castleholy.jpg')"
   },
   {
     id: 21,
@@ -162,7 +162,7 @@ const cards = [
     price: 3.99,
     colorName: 'green',
     color: 'darkgreen',
-    img: "url('../assets/holyground1.jpg')"
+    img: "url('assets/holyground1.jpg')"
   },
   {
     id: 22,
@@ -180,7 +180,7 @@ const cards = [
     price: 4.99,
     colorName: 'green',
     color: 'darkgreen',
-    img: "url('../assets/holyground2.jpg')"
+    img: "url('assets/holyground2.jpg')"
   },
   {
     id: 23,
@@ -198,7 +198,7 @@ const cards = [
     price: 2.99,
     colorName: 'green',
     color: 'darkgreen',
-    img: "url('../assets/warriorholy1.jpg')"
+    img: "url('assets/warriorholy1.jpg')"
   },
   {
     id: 24,
@@ -216,7 +216,7 @@ const cards = [
     price: 3.99,
     colorName: 'green',
     color: 'darkgreen',
-    img: "url('../assets/warriorholy2.jpg')"
+    img: "url('assets/warriorholy2.jpg')"
   },
   {
     id: 25,
@@ -234,7 +234,7 @@ const cards = [
     price: 3.99,
     colorName: 'green',
     color: 'darkgreen',
-    img: "url('../assets/hunterholy1.jpg')"
+    img: "url('assets/hunterholy1.jpg')"
   },
   {
     id: 26,
@@ -252,7 +252,7 @@ const cards = [
     price: 5.99,
     colorName: 'green',
     color: 'darkgreen',
-    img: "url('../assets/hunterholy2.jpg')"
+    img: "url('assets/hunterholy2.jpg')"
   },
   // Bloody gorge cards
   {
@@ -271,7 +271,7 @@ const cards = [
     price: 2.99,
     colorName: 'red',
     color: 'darkred',
-    img: "url('../assets/castlebloody.jpg')"
+    img: "url('assets/castlebloody.jpg')"
   },
   {
     id: 31,
@@ -289,7 +289,7 @@ const cards = [
     price: 3.99,
     colorName: 'red',
     color: 'darkred',
-    img: "url('../assets/bloodygorge1.jpg')"
+    img: "url('assets/bloodygorge1.jpg')"
   },
   {
     id: 32,
@@ -307,7 +307,7 @@ const cards = [
     price: 4.99,
     colorName: 'red',
     color: 'darkred',
-    img: "url('../assets/bloodygorge2.jpg')"
+    img: "url('assets/bloodygorge2.jpg')"
   },
   {
     id: 33,
@@ -325,7 +325,7 @@ const cards = [
     price: 2.99,
     colorName: 'red',
     color: 'darkred',
-    img: "url('../assets/berserkerbloody1.jpg')"
+    img: "url('assets/berserkerbloody1.jpg')"
   },
   {
     id: 34,
@@ -343,7 +343,7 @@ const cards = [
     price: 3.99,
     colorName: 'red',
     color: 'darkred',
-    img: "url('../assets/berserkerbloody2.jpg')"
+    img: "url('assets/berserkerbloody2.jpg')"
   },
   {
     id: 35,
@@ -361,7 +361,7 @@ const cards = [
     price: 3.99,
     colorName: 'red',
     color: 'darkred',
-    img: "url('../assets/roguebloody1.jpg')"
+    img: "url('assets/roguebloody1.jpg')"
   },
   {
     id: 36,
@@ -379,6 +379,6 @@ const cards = [
     price: 5.99,
     colorName: 'red',
     color: 'darkred',
-    img: "url('../assets/roguebloody2.jpg')"
+    img: "url('assets/roguebloody2.jpg')"
   }
 ];
