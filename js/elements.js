@@ -175,13 +175,17 @@ window.onclick = function (event) {
 // My cards section
 function myCardsClick() {
   if (myCardsDiv.innerHTML == '') {
-    console.log('EMPTYYYYYY');
     const divNoCards = document.createElement('p');
+
     divNoCards.setAttribute('id', 'divNoCardYet');
     divNoCards.innerHTML = 'No cards yet';
     divNoCards.style.color = 'rgb(255, 255, 255)';
-    divNoCards.style.fontSize = '100px';
-    divNoCards.style.textAlign = 'left';
+    divNoCards.style.fontSize = '60px';
+    divNoCards.style.fontWeight = 'bold';
+    divNoCards.style.textAlign = 'center';
+    divNoCards.style.marginTop = '300px';
+    divNoCards.style.textShadow =
+      '4px 4px 5px purple, 6px 6px 5px rgb(0, 0, 0)';
 
     myCardsDiv.appendChild(divNoCards);
   } else {
@@ -196,9 +200,9 @@ function myCardsClick() {
     x.classList.add('hide');
     myCardsDiv.classList.remove('hide');
   }
-  console.log('mycardsdiv.innerHTML', myCardsDiv.innerHTML);
-  console.log(App.elements.myCards);
-  console.log(App.model.myCards);
+  // console.log('mycardsdiv.innerHTML', myCardsDiv.innerHTML);
+  // console.log(App.elements.myCards);
+  // console.log(App.model.myCards);
 }
 
 // Page overlay with coming soon
