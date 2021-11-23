@@ -174,14 +174,29 @@ window.onclick = function (event) {
 
 // My cards section
 function myCardsClick() {
-  App.elements.myCards = App.model.myCards.map(createCard);
-  console.log('jorge cards');
-  const myCardsDiv = document.getElementById('myCardsDiv');
-  myCardsDiv.innerHTML = '';
-  App.elements.myCards.forEach((CardElem) => myCardsDiv.appendChild(CardElem));
-  var x = document.getElementById('shop');
-  x.classList.add('hide');
-  myCardsDiv.classList.remove('hide');
+  if (myCardsDiv.innerHTML == '') {
+    console.log('EMPTYYYYYY');
+    const divNoCards = document.createElement('p');
+    divNoCards.setAttribute('id', 'divNoCardYet');
+    divNoCards.innerHTML = 'No cards yet';
+    divNoCards.style.color = 'rgb(255, 255, 255)';
+    divNoCards.style.fontSize = '100px';
+    divNoCards.style.textAlign = 'left';
+
+    myCardsDiv.appendChild(divNoCards);
+  } else {
+    App.elements.myCards = App.model.myCards.map(createCard);
+    console.log('jorge cards');
+    const myCardsDiv = document.getElementById('myCardsDiv');
+    myCardsDiv.innerHTML = '';
+    App.elements.myCards.forEach((CardElem) =>
+      myCardsDiv.appendChild(CardElem)
+    );
+    var x = document.getElementById('shop');
+    x.classList.add('hide');
+    myCardsDiv.classList.remove('hide');
+  }
+  console.log('mycardsdiv.innerHTML', myCardsDiv.innerHTML);
   console.log(App.elements.myCards);
   console.log(App.model.myCards);
 }
