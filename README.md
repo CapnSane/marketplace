@@ -1,5 +1,7 @@
 # Welcome to the Hallowed Grounds :crossed_swords:
+
 #
+
 ### About it
 
 This repository is a Marketplace Project signed to me by Yoyo Sensei from Japan.
@@ -13,18 +15,27 @@ The rules for this project are:
 - Bootstrap is allowed.
 
 This same project shall be individually made using Vue.js framework in the near future as part of a programming Yoyo Sensei class.
+
+#### Marketplace - Check it out!
+
+Whether you want to look how the project looks like, you can access [Hallowed Grounds](https://capnsane.github.io/marketplace/). Unfortunately it's only the marketplace, but the ideia of the game design is this.
+
 ##
 
 #### The first commit
 
 The first commit is an open repository only with this _README_ file.
+
 ##
 
 ### Game rules
+
 **Hallowed Grounds** is a card game that involves two or three players who are engaged in a battle of land domination. Each player has their own deck, either one previously constructed or made from a limited pool of cards for the event. All the players start the game with the _Castle_ card on the board, which have 30 as their "_life total_" and loses the game when their life total is reduced to zero. A player can also lose if they must draw from an empty deck.
 
 #### Cards in Hallowed Grounds
+
 There are three types of cards:
+
 - _Castle_
 - _Ground_
 - _Brave_
@@ -38,6 +49,7 @@ The _Brave_ type is the soldier-like, that can attack or protect. This card has 
 #### Attributes
 
 There are five card attributes:
+
 - _Attack_
 - _Defense_
 - _Area_
@@ -63,6 +75,7 @@ The turns are basicaly when the player of the turn can draw the card and execute
 #### Decks and number of cards
 
 There are three types of decks:
+
 - <span style="color:purple">_Dread cards_ (purple)</span>
 - <span style="color:darkgreen">_Holy cards_ (green)</span>
 - <span style="color:darkred">_Bloody cards_ (red)</span>
@@ -72,9 +85,6 @@ The players can choose their deck cards freely, respecting the limit of 50 cards
 Mixed decks are for adventurers. When a mixed deck is created, only the cards with their respective card colours can be place on the _Ground_ card, Brave cards in purple with Ground cards in purple and so on.
 
 To start the match, players need to shuffle the decks and draw 7 cards, each Castle is placed on the board and the player who starts the turn is decided by agreement between the players.
-
-
-
 
 ### Copyright
 
